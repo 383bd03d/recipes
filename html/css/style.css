@@ -1,0 +1,1316 @@
+/*
+
+    COLORS
+
+*/
+/*
+
+
+*/
+/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
+/* Document
+       ========================================================================== */
+/**
+     * 1. Correct the line height in all browsers.
+     * 2. Prevent adjustments of font size after orientation changes in
+     *    IE on Windows Phone and in iOS.
+     */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+       ========================================================================== */
+/**
+     * Remove the margin in all browsers (opinionated).
+     */
+body {
+  margin: 0;
+}
+
+/**
+     * Add the correct display in IE 9-.
+     */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin: 0.75em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin: 1em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  margin: 1.28205em 0;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 1.5em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  line-height: 1.80723em;
+  margin: 1.80723em 0;
+}
+
+h6 {
+  font-size: 0.67em;
+  line-height: 2.23881em;
+  margin: 2.23881em 0;
+}
+
+/* Grouping content
+       ========================================================================== */
+/**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+blockquote {
+  margin: 1.5em 40px;
+}
+
+dl,
+ol,
+ul {
+  margin: 1.5em 0;
+}
+
+/**
+       * Turn off margins on nested lists.
+       */
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+     * Add the correct display in IE 9-.
+     */
+figcaption,
+figure {
+  display: block;
+}
+
+/**
+     * Add the correct margin in IE 8.
+     */
+figure {
+  margin: 1.5em 40px;
+}
+
+/**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+     * Add the correct display in IE.
+     */
+main {
+  display: block;
+}
+
+/**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+p,
+pre {
+  margin: 1.5em 0;
+}
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Links
+       ========================================================================== */
+/**
+     * 1. Remove the gray background on active links in IE 10.
+     * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+     */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/* Text-level semantics
+       ========================================================================== */
+/**
+     * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+     * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+     */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+     * Add the correct font style in Android 4.3-.
+     */
+dfn {
+  font-style: italic;
+}
+
+/**
+     * Add the correct background and color in IE 9-.
+     */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+     * Add the correct font size in all browsers.
+     */
+small {
+  font-size: 80%;
+}
+
+/**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+     * Add the correct display in iOS 4-7.
+     */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+     * Remove the border on images inside links in IE 10-.
+     */
+img {
+  border-style: none;
+}
+
+/**
+     * Hide the overflow in IE.
+     */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+       ========================================================================== */
+/**
+     * 1. Change the font styles in all browsers (opinionated).
+     * 2. Remove the margin in Firefox and Safari.
+     */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.5em;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+     * Show the overflow in IE.
+     */
+button {
+  overflow: visible;
+}
+
+/**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+     * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+     *    controls in Android 4.
+     * 2. Correct the inability to style clickable types in iOS and Safari.
+     */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  /**
+       * Remove the inner border and padding in Firefox.
+       */
+  /**
+       * Restore the focus styles unset by the previous rule.
+       */
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+     * Show the overflow in Edge.
+     */
+input {
+  overflow: visible;
+}
+
+/**
+     * 1. Add the correct box sizing in IE 10-.
+     * 2. Remove the padding in IE 10-.
+     */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+  /**
+       * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+       */
+}
+
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/**
+     * Correct the padding in Firefox.
+     */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  color: inherit;
+  /* 2 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+     * 1. Add the correct display in IE 9-.
+     * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+     * Remove the default vertical scrollbar in IE.
+     */
+textarea {
+  overflow: auto;
+}
+
+/* Interactive
+       ========================================================================== */
+/*
+     * Add the correct display in Edge, IE, and Firefox.
+     */
+details {
+  display: block;
+}
+
+/*
+     * Add the correct display in all browsers.
+     */
+summary {
+  display: list-item;
+}
+
+/*
+     * Add the correct display in IE 9-.
+     */
+menu {
+  display: block;
+  /*
+         * 1. Set 1 unit of vertical rhythm on the top and bottom margin.
+         * 2. Set consistent space for the list style image.
+         */
+  margin: 1.5em 0;
+  /* 1 */
+  padding: 0 0 0 40px;
+  /* 2 */
+  /**
+         * Turn off margins on nested lists.
+         */
+}
+
+menu menu,
+ol menu,
+ul menu {
+  margin: 0;
+}
+
+/* Scripting
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+canvas {
+  display: inline-block;
+}
+
+/**
+     * Add the correct display in IE.
+     */
+template {
+  display: none;
+}
+
+/* Hidden
+       ========================================================================== */
+/**
+     * Add the correct display in IE 10-.
+     */
+[hidden] {
+  display: none;
+}
+
+grid {
+  --grid-tc: repeat(4, 1fr);
+  --grid-cs: 1;
+  --grid-ce: -1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: var(--grid-tc);
+      grid-template-columns: var(--grid-tc);
+}
+
+grid > * {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  display: block;
+}
+
+grid[columns="1"] {
+  --grid-tc: repeat(1, 1fr);
+}
+
+grid[columns="2"] {
+  --grid-tc: repeat(2, 1fr);
+}
+
+grid[columns="3"] {
+  --grid-tc: repeat(3, 1fr);
+}
+
+grid[columns="4"] {
+  --grid-tc: repeat(4, 1fr);
+}
+
+grid[columns="5"] {
+  --grid-tc: repeat(5, 1fr);
+}
+
+grid[columns="6"] {
+  --grid-tc: repeat(6, 1fr);
+}
+
+grid[columns="7"] {
+  --grid-tc: repeat(7, 1fr);
+}
+
+grid[columns="8"] {
+  --grid-tc: repeat(8, 1fr);
+}
+
+grid[columns="9"] {
+  --grid-tc: repeat(9, 1fr);
+}
+
+grid[columns="10"] {
+  --grid-tc: repeat(10, 1fr);
+}
+
+grid[columns="11"] {
+  --grid-tc: repeat(11, 1fr);
+}
+
+grid[columns="12"] {
+  --grid-tc: repeat(12, 1fr);
+}
+
+grid > [span^="1"] {
+  --grid-cs: 1;
+}
+
+grid > [span^="2"] {
+  --grid-cs: 2;
+}
+
+grid > [span^="3"] {
+  --grid-cs: 3;
+}
+
+grid > [span^="4"] {
+  --grid-cs: 4;
+}
+
+grid > [span^="5"] {
+  --grid-cs: 5;
+}
+
+grid > [span^="6"] {
+  --grid-cs: 6;
+}
+
+grid > [span^="7"] {
+  --grid-cs: 7;
+}
+
+grid > [span^="8"] {
+  --grid-cs: 8;
+}
+
+grid > [span^="9"] {
+  --grid-cs: 9;
+}
+
+grid > [span^="10"] {
+  --grid-cs: 10;
+}
+
+grid > [span^="11"] {
+  --grid-cs: 11;
+}
+
+grid > [span^="12"] {
+  --grid-cs: 12;
+}
+
+grid > [span$="+1"],
+grid > [span="1"] {
+  --grid-ce: 1;
+}
+
+grid > [span$="+1"],
+grid > [span$="-0"],
+grid > [span="1"] {
+  --grid-ce: 1;
+}
+
+grid > [span$="+2"],
+grid > [span$="-1"],
+grid > [span="2"] {
+  --grid-ce: 2;
+}
+
+grid > [span$="+3"],
+grid > [span$="-2"],
+grid > [span="3"] {
+  --grid-ce: 3;
+}
+
+grid > [span$="+4"],
+grid > [span$="-3"],
+grid > [span="4"] {
+  --grid-ce: 4;
+}
+
+grid > [span$="+5"],
+grid > [span$="-4"],
+grid > [span="5"] {
+  --grid-ce: 5;
+}
+
+grid > [span$="+6"],
+grid > [span$="-5"],
+grid > [span="6"] {
+  --grid-ce: 6;
+}
+
+grid > [span$="+7"],
+grid > [span$="-6"],
+grid > [span="7"] {
+  --grid-ce: 7;
+}
+
+grid > [span$="+8"],
+grid > [span$="-7"],
+grid > [span="8"] {
+  --grid-ce: 8;
+}
+
+grid > [span$="+9"],
+grid > [span$="-8"],
+grid > [span="9"] {
+  --grid-ce: 9;
+}
+
+grid > [span$="+10"],
+grid > [span$="-9"],
+grid > [span="10"] {
+  --grid-ce: 10;
+}
+
+grid > [span$="+11"],
+grid > [span$="-10"],
+grid > [span="11"] {
+  --grid-ce: 11;
+}
+
+grid > [span$="+12"],
+grid > [span$="-11"],
+grid > [span="12"] {
+  --grid-ce: 12;
+}
+
+grid > [span$="-12"] {
+  --grid-ce: 13;
+}
+
+grid > [span] {
+  -ms-grid-column-span: var(--grid-ce);
+      grid-column-end: span var(--grid-ce);
+}
+
+grid > [span*="+"],
+grid > [span*="-"],
+grid > [span*=".."] {
+  -ms-grid-column: var(--grid-cs);
+      grid-column-start: var(--grid-cs);
+}
+
+grid > [span*="-"],
+grid > [span*=".."] {
+  grid-column-end: var(--grid-ce);
+}
+
+grid > [span="row"] {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  grid[columns-s="1"] {
+    --grid-tc: repeat(1, 1fr);
+  }
+  grid[columns-s="2"] {
+    --grid-tc: repeat(2, 1fr);
+  }
+  grid[columns-s="3"] {
+    --grid-tc: repeat(3, 1fr);
+  }
+  grid[columns-s="4"] {
+    --grid-tc: repeat(4, 1fr);
+  }
+  grid[columns-s="5"] {
+    --grid-tc: repeat(5, 1fr);
+  }
+  grid[columns-s="6"] {
+    --grid-tc: repeat(6, 1fr);
+  }
+  grid[columns-s="7"] {
+    --grid-tc: repeat(7, 1fr);
+  }
+  grid[columns-s="8"] {
+    --grid-tc: repeat(8, 1fr);
+  }
+  grid[columns-s="9"] {
+    --grid-tc: repeat(9, 1fr);
+  }
+  grid[columns-s="10"] {
+    --grid-tc: repeat(10, 1fr);
+  }
+  grid[columns-s="11"] {
+    --grid-tc: repeat(11, 1fr);
+  }
+  grid[columns-s="12"] {
+    --grid-tc: repeat(12, 1fr);
+  }
+  grid > [span-s^="1"] {
+    --grid-cs: 1;
+  }
+  grid > [span-s^="2"] {
+    --grid-cs: 2;
+  }
+  grid > [span-s^="3"] {
+    --grid-cs: 3;
+  }
+  grid > [span-s^="4"] {
+    --grid-cs: 4;
+  }
+  grid > [span-s^="5"] {
+    --grid-cs: 5;
+  }
+  grid > [span-s^="6"] {
+    --grid-cs: 6;
+  }
+  grid > [span-s^="7"] {
+    --grid-cs: 7;
+  }
+  grid > [span-s^="8"] {
+    --grid-cs: 8;
+  }
+  grid > [span-s^="9"] {
+    --grid-cs: 9;
+  }
+  grid > [span-s^="10"] {
+    --grid-cs: 10;
+  }
+  grid > [span-s^="11"] {
+    --grid-cs: 11;
+  }
+  grid > [span-s^="12"] {
+    --grid-cs: 12;
+  }
+  grid > [span-s$="+1"],
+  grid > [span="1"] {
+    --grid-ce: 1;
+  }
+  grid > [span-s$="+1"],
+  grid > [span-s$="-0"],
+  grid > [span-s="1"] {
+    --grid-ce: 1;
+  }
+  grid > [span-s$="+2"],
+  grid > [span-s$="-1"],
+  grid > [span-s="2"] {
+    --grid-ce: 2;
+  }
+  grid > [span-s$="+3"],
+  grid > [span-s$="-2"],
+  grid > [span-s="3"] {
+    --grid-ce: 3;
+  }
+  grid > [span-s$="+4"],
+  grid > [span-s$="-3"],
+  grid > [span-s="4"] {
+    --grid-ce: 4;
+  }
+  grid > [span-s$="+5"],
+  grid > [span-s$="-4"],
+  grid > [span-s="5"] {
+    --grid-ce: 5;
+  }
+  grid > [span-s$="+6"],
+  grid > [span-s$="-5"],
+  grid > [span-s="6"] {
+    --grid-ce: 6;
+  }
+  grid > [span-s$="+7"],
+  grid > [span-s$="-6"],
+  grid > [span-s="7"] {
+    --grid-ce: 7;
+  }
+  grid > [span-s$="+8"],
+  grid > [span-s$="-7"],
+  grid > [span-s="8"] {
+    --grid-ce: 8;
+  }
+  grid > [span-s$="+9"],
+  grid > [span-s$="-8"],
+  grid > [span-s="9"] {
+    --grid-ce: 9;
+  }
+  grid > [span-s$="+10"],
+  grid > [span-s$="-9"],
+  grid > [span-s="10"] {
+    --grid-ce: 10;
+  }
+  grid > [span-s$="+11"],
+  grid > [span-s$="-10"],
+  grid > [span-s="11"] {
+    --grid-ce: 11;
+  }
+  grid > [span-s$="+12"],
+  grid > [span-s$="-11"],
+  grid > [span-s="12"] {
+    --grid-ce: 12;
+  }
+  grid > [span-s$="-12"] {
+    --grid-ce: 13;
+  }
+  grid > [span-s] {
+    -ms-grid-column-span: var(--grid-ce);
+        grid-column-end: span var(--grid-ce);
+  }
+  grid > [span-s*="+"],
+  grid > [span-s*="-"],
+  grid > [span-s*=".."] {
+    -ms-grid-column: var(--grid-cs);
+        grid-column-start: var(--grid-cs);
+  }
+  grid > [span-s*="-"],
+  grid > [span-s*=".."] {
+    grid-column-end: var(--grid-ce);
+  }
+  grid > [span-s="row"] {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1439px) {
+  grid[columns-l="1"] {
+    --grid-tc: repeat(1, 1fr);
+  }
+  grid[columns-l="2"] {
+    --grid-tc: repeat(2, 1fr);
+  }
+  grid[columns-l="3"] {
+    --grid-tc: repeat(3, 1fr);
+  }
+  grid[columns-l="4"] {
+    --grid-tc: repeat(4, 1fr);
+  }
+  grid[columns-l="5"] {
+    --grid-tc: repeat(5, 1fr);
+  }
+  grid[columns-l="6"] {
+    --grid-tc: repeat(6, 1fr);
+  }
+  grid[columns-l="7"] {
+    --grid-tc: repeat(7, 1fr);
+  }
+  grid[columns-l="8"] {
+    --grid-tc: repeat(8, 1fr);
+  }
+  grid[columns-l="9"] {
+    --grid-tc: repeat(9, 1fr);
+  }
+  grid[columns-l="10"] {
+    --grid-tc: repeat(10, 1fr);
+  }
+  grid[columns-l="11"] {
+    --grid-tc: repeat(11, 1fr);
+  }
+  grid[columns-l="12"] {
+    --grid-tc: repeat(12, 1fr);
+  }
+  grid > [span-l^="1"] {
+    --grid-cs: 1;
+  }
+  grid > [span-l^="2"] {
+    --grid-cs: 2;
+  }
+  grid > [span-l^="3"] {
+    --grid-cs: 3;
+  }
+  grid > [span-l^="4"] {
+    --grid-cs: 4;
+  }
+  grid > [span-l^="5"] {
+    --grid-cs: 5;
+  }
+  grid > [span-l^="6"] {
+    --grid-cs: 6;
+  }
+  grid > [span-l^="7"] {
+    --grid-cs: 7;
+  }
+  grid > [span-l^="8"] {
+    --grid-cs: 8;
+  }
+  grid > [span-l^="9"] {
+    --grid-cs: 9;
+  }
+  grid > [span-l^="10"] {
+    --grid-cs: 10;
+  }
+  grid > [span-l^="11"] {
+    --grid-cs: 11;
+  }
+  grid > [span-l^="12"] {
+    --grid-cs: 12;
+  }
+  grid > [span-l$="+1"],
+  grid > [span="1"] {
+    --grid-ce: 1;
+  }
+  grid > [span-l$="+1"],
+  grid > [span-l$="-0"],
+  grid > [span-l="1"] {
+    --grid-ce: 1;
+  }
+  grid > [span-l$="+2"],
+  grid > [span-l$="-1"],
+  grid > [span-l="2"] {
+    --grid-ce: 2;
+  }
+  grid > [span-l$="+3"],
+  grid > [span-l$="-2"],
+  grid > [span-l="3"] {
+    --grid-ce: 3;
+  }
+  grid > [span-l$="+4"],
+  grid > [span-l$="-3"],
+  grid > [span-l="4"] {
+    --grid-ce: 4;
+  }
+  grid > [span-l$="+5"],
+  grid > [span-l$="-4"],
+  grid > [span-l="5"] {
+    --grid-ce: 5;
+  }
+  grid > [span-l$="+6"],
+  grid > [span-l$="-5"],
+  grid > [span-l="6"] {
+    --grid-ce: 6;
+  }
+  grid > [span-l$="+7"],
+  grid > [span-l$="-6"],
+  grid > [span-l="7"] {
+    --grid-ce: 7;
+  }
+  grid > [span-l$="+8"],
+  grid > [span-l$="-7"],
+  grid > [span-l="8"] {
+    --grid-ce: 8;
+  }
+  grid > [span-l$="+9"],
+  grid > [span-l$="-8"],
+  grid > [span-l="9"] {
+    --grid-ce: 9;
+  }
+  grid > [span-l$="+10"],
+  grid > [span-l$="-9"],
+  grid > [span-l="10"] {
+    --grid-ce: 10;
+  }
+  grid > [span-l$="+11"],
+  grid > [span-l$="-10"],
+  grid > [span-l="11"] {
+    --grid-ce: 11;
+  }
+  grid > [span-l$="+12"],
+  grid > [span-l$="-11"],
+  grid > [span-l="12"] {
+    --grid-ce: 12;
+  }
+  grid > [span-l$="-12"] {
+    --grid-ce: 13;
+  }
+  grid > [span-l] {
+    -ms-grid-column-span: var(--grid-ce);
+        grid-column-end: span var(--grid-ce);
+  }
+  grid > [span-l*="+"],
+  grid > [span-l*="-"],
+  grid > [span-l*=".."] {
+    -ms-grid-column: var(--grid-cs);
+        grid-column-start: var(--grid-cs);
+  }
+  grid > [span-l*="-"],
+  grid > [span-l*=".."] {
+    grid-column-end: var(--grid-ce);
+  }
+  grid > [span-l="row"] {
+    grid-column: 1 / -1;
+  }
+}
+
+grid.is-debug > * {
+  --color: hsla(7, 92%, 66%, 0.3);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color)), to(var(--color)));
+  background-image: linear-gradient(to bottom, var(--color) 0%, var(--color) 100%);
+}
+
+grid.is-debug > :nth-child(6n+2) {
+  --color: hsla(227, 53%, 61%, 0.3);
+}
+
+grid.is-debug > :nth-child(6n+3) {
+  --color: hsla(40, 71%, 58%, 0.3);
+}
+
+grid.is-debug > :nth-child(6n+4) {
+  --color: hsla(137, 63%, 57%, 0.3);
+}
+
+grid.is-debug > :nth-child(6n+5) {
+  --color: hsla(299, 62%, 63%, 0.3);
+}
+
+grid.is-debug > :nth-child(6n+6) {
+  --color: hsla(184, 57%, 60%, 0.3);
+}
+
+grid.is-debug > :nth-child(6n+7) {
+  --color: hsla(7, 92%, 66%, 0.3);
+}
+
+/* ____________________ */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter/Inter-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Inter/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter/Inter-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter/Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/SF-Pro-Display/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/SF-Pro-Display/SFProDisplay-Bold.woff") format("woff");
+}
+
+/* ____________________ */
+header {
+  height: 60px;
+}
+
+header grid {
+  position: relative;
+  height: 100%;
+}
+
+header grid * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .menu-button {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 20px;
+}
+
+header .menu-button .__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 55px;
+  height: 100%;
+  margin-left: -20px;
+}
+
+header .menu-button .__wrapper svg {
+  width: 15px;
+  height: 14px;
+  fill: #0D0C22;
+}
+
+@media only screen and (min-width: 1024px) {
+  header .menu-button .__wrapper {
+    display: none;
+  }
+}
+
+header .nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  header .nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+header .nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+header .nav .logo svg {
+  width: 80px;
+  height: 17px;
+  fill: #0D0C22;
+}
+
+@media only screen and (min-width: 1024px) {
+  header .nav .logo svg {
+    width: 96.8px;
+    height: 20px;
+  }
+}
+
+header .search-button {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 20px;
+}
+
+header .search-button .__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 54px;
+  height: 100%;
+  margin-right: -20px;
+}
+
+header .search-button .__wrapper svg {
+  width: 14px;
+  height: 14px;
+  fill: #0D0C22;
+}
+
+@media only screen and (min-width: 1024px) {
+  header .search-button .__wrapper {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

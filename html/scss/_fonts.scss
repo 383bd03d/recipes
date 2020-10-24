@@ -1,0 +1,48 @@
+@import 'mixins';
+
+/* ____________________ */
+
+$path: '../fonts';
+
+@include font-face(Inter, '#{$path}/Inter/Inter-Regular', 400, normal, woff2 woff);
+@include font-face(Inter, '#{$path}/Inter/Inter-Medium', 500, normal, woff2 woff);
+@include font-face(Inter, '#{$path}/Inter/Inter-SemiBold', 600, normal, woff2 woff);
+@include font-face(Inter, '#{$path}/Inter/Inter-Bold', 700, normal, woff2 woff);
+
+@include font-face('SF Pro Display', '#{$path}/SF-Pro-Display/SFProDisplay-Bold', 700, normal, woff2 woff);
+
+
+
+/* ____________________ */
+
+@mixin Inter($weight) {
+
+    font-family: 'Inter', sans-serif;
+
+    @if $weight == regular {
+        font-weight: 400;
+    }
+
+    @else if $weight == medium {
+        font-weight: 500;
+    }
+
+    @else if $weight == semibold {
+        font-weight: 600;
+    }
+
+    @else if $weight == bold {
+        font-weight: 700;
+    }
+
+}
+
+@mixin SF-Pro-Display($weight) {
+
+    font-family: 'SF Pro Display', sans-serif;
+
+    @if $weight == bold {
+        font-weight: 700;
+    }
+    
+}

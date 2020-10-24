@@ -1,0 +1,97 @@
+header {
+    height: 60px;
+
+    grid {
+        position: relative;
+        height: 100%;
+
+        * {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .menu-button {
+        align-items: flex-start;
+        padding-left: $base;
+
+        .__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 15px + $base * 2;
+            height: 100%;
+            margin-left: -$base;
+    
+            svg {
+                width: 15px;
+                height: 14px; 
+                fill: $black;
+            }
+
+            @media only screen and (min-width: $breakpoint-m) {
+                display: none;
+            }
+        }
+
+        
+    }
+
+    .nav {
+        align-items: center;
+
+        @media only screen and (min-width: $breakpoint-m) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            
+            svg {
+                width: 80px;
+                height: 17px;
+                fill: $black;
+    
+    
+                @media only screen and (min-width: $breakpoint-m) {
+                    width: 96.8px;
+                    height: 20px;
+                }
+            }
+    
+        }
+    }
+
+    .search-button {
+        align-items: flex-end;
+        padding-right: $base;
+
+        .__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 14px + $base * 2;
+            height: 100%;
+            margin-right: -$base;
+    
+            svg {
+                width: 14px;
+                height: 14px; 
+                fill: $black;
+            }
+
+            @media only screen and (min-width: $breakpoint-m) {
+                display: none;
+            }
+        }
+    }
+}
