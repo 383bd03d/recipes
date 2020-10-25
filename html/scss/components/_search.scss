@@ -1,0 +1,47 @@
+.search {
+
+    border: 1px solid $primary;
+    border-radius: 8px;
+
+    > .input {
+        width: 320px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 20px;
+        flex-wrap: wrap;
+
+        input[type="text"] {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            @include Inter(regular);
+            font-size: 14px;
+            line-height: 16px;
+            flex-wrap: wrap;
+            margin-left: 16px;
+            flex: 1;
+            color: $primary;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $primary;
+                opacity: 0.75;
+            }
+        }
+    
+        svg {
+            flex: 0 1 auto;
+            width: 18px;
+            height: 18px;
+            fill: $primary;
+        }
+
+    }
+
+}

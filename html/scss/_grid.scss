@@ -4,7 +4,7 @@ $cell-attribute: span !default;
 $columns: 12 !default;
 $default-cols: 4 !default;
 
-$small-breakpoint: 600px;
+$small-breakpoint: $breakpoint-m;
 $small-suffix: s;
 $large-breakpoint: 1440px;
 $large-suffix: l;

@@ -13,85 +13,204 @@ header {
         }
     }
 
-    .menu-button {
-        align-items: flex-start;
-        padding-left: $base;
+    aside {
 
-        .__wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 15px + $base * 2;
-            height: 100%;
-            margin-left: -$base;
+        &.hamburger {
+            align-items: flex-start;
+            padding-left: $base;
     
-            svg {
-                width: 15px;
-                height: 14px; 
-                fill: $black;
-            }
-
-            @media only screen and (min-width: $breakpoint-m) {
-                display: none;
-            }
-        }
-
+            > .button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 15px + $base * 2;
+                height: 100%;
+                margin-left: -$base;
         
-    }
-
-    .nav {
-        align-items: center;
-
-        @media only screen and (min-width: $breakpoint-m) {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            
-            svg {
-                width: 80px;
-                height: 17px;
-                fill: $black;
-    
+                svg {
+                    width: 15px;
+                    height: 14px; 
+                    fill: $black;
+                }
     
                 @media only screen and (min-width: $breakpoint-m) {
-                    width: 96.8px;
-                    height: 20px;
+                    display: none;
                 }
             }
+            
+        }
+
+        &.search-mobile {
+            align-items: flex-end;
+            padding-right: $base;
     
+            > .button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 14px + $base * 2;
+                height: 100%;
+                margin-right: -$base;
+        
+                svg {
+                    width: 14px;
+                    height: 14px; 
+                    fill: $black;
+                }
+    
+                @media only screen and (min-width: $breakpoint-m) {
+                    display: none;
+                }
+
+            }
+
         }
     }
 
-    .search-button {
-        align-items: flex-end;
-        padding-right: $base;
+    nav {
+    
+        &.navigation {
+            > * {
+                flex: 1;
+                justify-content: center;
+            }
 
-        .__wrapper {
-            display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            width: 14px + $base * 2;
-            height: 100%;
-            margin-right: -$base;
     
-            svg {
-                width: 14px;
-                height: 14px; 
-                fill: $black;
+            @media only screen and (min-width: $breakpoint-m) {
+                flex-direction: row;
+            }
+    
+            .logo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                
+                @media only screen and (min-width: $breakpoint-m) {
+                    align-items: flex-start;
+                    margin-right: auto;
+                }
+
+                a {
+                    height: 100%;
+                }
+
+                svg {
+                    width: 80px;
+                    height: 17px;
+                    fill: $black;
+        
+        
+                    @media only screen and (min-width: $breakpoint-m) {
+                        width: 96.8px;
+                        height: 20px;
+                    }
+                }
+        
+            }
+            
+            .menu {
+
+                height: 100%;
+                display: none;
+
+                @media only screen and (min-width: $breakpoint-m) {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                ul,
+                li,
+                span,
+                a {
+                    height: 100%;
+                }
+
+                ul {
+
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        padding: 0 15px;
+
+                        span,
+                        a {
+                            display: flex;
+                            flex-direction: row;
+                            cursor: pointer;
+
+                            p {
+                                @include SF-Pro-Display(bold);
+                                font-size: 12px;
+                                line-height: 100%;
+                                color: $black;
+                            }
+                                
+                            svg {
+                                    width: 6px;
+                                    height: 3px;
+                                    fill: $black;
+                                    margin-left: 7px;
+                            }
+                        }
+                        
+                    }
+                    
+                }
             }
 
-            @media only screen and (min-width: $breakpoint-m) {
+
+            .search-section {
+                
+                margin-left: auto;
+                height: 100%;
                 display: none;
+
+                @media only screen and (min-width: $breakpoint-m) {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+
+                .search {
+                    
+                    border-color: $grey;
+                    border-radius: 4px;
+
+                    > .input {
+                        width: 200px;
+                        height: 30px;
+                        padding: 0 10px;
+                        
+                        input[type="text"] {
+                            @include Inter(medium);
+                            font-size: 11px;
+                            color: $grey;
+                            margin-left: 10px;
+
+                            &::placeholder {
+                                color: $grey;
+                                opacity: .5;
+                            }
+                        }
+    
+                        svg {
+                            width: 12px;
+                            height: 12px;
+                            fill: $grey;
+                        }
+                    }
+    
+                }
+
             }
         }
+
     }
+
 }
