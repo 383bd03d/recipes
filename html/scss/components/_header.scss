@@ -1,5 +1,9 @@
 header {
     height: 60px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba($background, .15);
+    backdrop-filter: blur(35px);
 
     grid {
         position: relative;
@@ -13,60 +17,57 @@ header {
         }
     }
 
-    aside {
+    .hamburger {
+        align-items: flex-start;
+        padding-left: $base;
 
-        &.hamburger {
-            align-items: flex-start;
-            padding-left: $base;
+        &-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 15px + $base * 2;
+            height: 100%;
+            margin-left: -$base;
     
-            > .button {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 15px + $base * 2;
-                height: 100%;
-                margin-left: -$base;
-        
-                svg {
-                    width: 15px;
-                    height: 14px; 
-                    fill: $black;
-                }
-    
-                @media only screen and (min-width: $breakpoint-m) {
-                    display: none;
-                }
+            svg {
+                width: 15px;
+                height: 14px; 
+                fill: $black;
             }
-            
+
+            @media only screen and (min-width: $breakpoint-s) {
+                display: none;
+            }
         }
-
-        &.search-mobile {
-            align-items: flex-end;
-            padding-right: $base;
-    
-            > .button {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 14px + $base * 2;
-                height: 100%;
-                margin-right: -$base;
         
-                svg {
-                    width: 14px;
-                    height: 14px; 
-                    fill: $black;
-                }
-    
-                @media only screen and (min-width: $breakpoint-m) {
-                    display: none;
-                }
+    }
 
+    .search-mobile {
+        align-items: flex-end;
+        padding-right: $base;
+
+        &-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 14px + $base * 2;
+            height: 100%;
+            margin-right: -$base;
+    
+            svg {
+                width: 14px;
+                height: 14px; 
+                fill: $black;
+            }
+
+            @media only screen and (min-width: $breakpoint-s) {
+                display: none;
             }
 
         }
+
     }
 
     nav {
@@ -79,7 +80,7 @@ header {
 
             align-items: center;
     
-            @media only screen and (min-width: $breakpoint-m) {
+            @media only screen and (min-width: $breakpoint-s) {
                 flex-direction: row;
             }
     
@@ -90,13 +91,18 @@ header {
                 justify-content: center;
                 height: 100%;
                 
-                @media only screen and (min-width: $breakpoint-m) {
+                @media only screen and (min-width: $breakpoint-s) {
                     align-items: flex-start;
                     margin-right: auto;
                 }
 
                 a {
                     height: 100%;
+                    padding: 0 15px;
+
+                    @media only screen and (min-width: $breakpoint-s) {
+                        padding: 0;
+                    }
                 }
 
                 svg {
@@ -105,7 +111,7 @@ header {
                     fill: $black;
         
         
-                    @media only screen and (min-width: $breakpoint-m) {
+                    @media only screen and (min-width: $breakpoint-s) {
                         width: 96.8px;
                         height: 20px;
                     }
@@ -118,7 +124,7 @@ header {
                 height: 100%;
                 display: none;
 
-                @media only screen and (min-width: $breakpoint-m) {
+                @media only screen and (min-width: $breakpoint-s) {
                     display: flex;
                     flex-direction: row;
                 }
@@ -134,9 +140,10 @@ header {
 
                     padding: 0;
                     margin: 0;
+                    flex-direction: row;
 
                     li {
-                        padding: 0 15px;
+                        padding: 0 25px;
 
                         span,
                         a {
@@ -171,7 +178,7 @@ header {
                 height: 100%;
                 display: none;
 
-                @media only screen and (min-width: $breakpoint-m) {
+                @media only screen and (min-width: $breakpoint-s) {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-end;
@@ -179,17 +186,18 @@ header {
 
                 .search {
                     
-                    border-color: $grey;
+                    border-color: rgba($grey, 0.25);
                     border-radius: 4px;
+                    width: 200px;
+                    height: 30px;
 
-                    > .input {
-                        width: 200px;
-                        height: 30px;
+                    &-input {
                         padding: 0 10px;
                         
                         input[type="text"] {
                             @include Inter(medium);
-                            font-size: 11px;
+                            font-size: 12px;
+                            line-height: 16px;
                             color: $grey;
                             margin-left: 10px;
 
@@ -203,6 +211,15 @@ header {
                             width: 12px;
                             height: 12px;
                             fill: $grey;
+                            opacity: .5;
+                        }
+                    }
+
+                    &:focus-within {
+                        border-color: rgba($grey, 1);
+
+                        svg {
+                            opacity: 1;
                         }
                     }
     

@@ -2,3 +2,44 @@
 
 @import '../components/search';
 @import '../components/header';
+
+.main-screen {
+
+    &-background {
+        background: url('../img/home-background.jpg?3') no-repeat center center;
+        background-size: cover;
+        width: 265px;
+        height: 340px;
+        right: 0;
+        top: $base;
+        position: absolute;
+        z-index: -1;
+
+        @media only screen and (min-width: $breakpoint-m) {
+            width: 840px;
+            height: 580px;
+            top: 0;
+        }
+    }
+
+    &-content {
+        margin-top: $base * 17;
+        @media only screen and (min-width: $breakpoint-m) {
+            margin-top: $base * 16;
+        }
+
+        .search {
+            @media only screen and (min-width: $breakpoint-m) {
+                width: 400px;
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 100%;
+            @media only screen and (min-width: $breakpoint-m) {
+                font-size: 48px;
+            }
+        }
+    }
+}

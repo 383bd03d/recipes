@@ -5,3 +5,30 @@ h4,
 p {
     margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    @include SF-Pro-Display(bold);
+    color: $black;
+}
+
+@mixin transition {
+    transition: all .15s ease;
+}
+
+.container {
+    padding: 0 $base;
+
+    @media only screen and (min-width: $breakpoint-m) {
+        padding: 0 $base * 3;
+    }
+}
+
+.mb-min {
+    margin-bottom: $base * 1.5;
+    @media only screen and (min-width: $breakpoint-m) {
+        margin-bottom: $base * 2;
+    }
+}

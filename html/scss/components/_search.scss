@@ -1,11 +1,14 @@
 .search {
 
-    border: 1px solid $primary;
+    border: 1px solid rgba($primary, .25);
     border-radius: 8px;
+    @include transition;
+    width: 100%;
+    height: 50px;
 
-    > .input {
-        width: 320px;
-        height: 50px;
+    &-input {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -31,8 +34,9 @@
 
             &::placeholder {
                 color: $primary;
-                opacity: 0.75;
+                opacity: 0.5;
             }
+
         }
     
         svg {
@@ -40,8 +44,17 @@
             width: 18px;
             height: 18px;
             fill: $primary;
+            @include transition;
+            opacity: .9;
         }
 
+    }
+
+    &:focus-within {
+        border: 1px solid rgba($primary, 1);
+        svg {
+            opacity: 1;
+        }
     }
 
 }
