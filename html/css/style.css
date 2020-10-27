@@ -1523,10 +1523,9 @@ header nav.navigation .menu ul li a {
 
 header nav.navigation .menu ul li span p,
 header nav.navigation .menu ul li a p {
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 12px;
-  line-height: 100%;
   color: #0D0C22;
 }
 
@@ -1615,9 +1614,9 @@ header nav.navigation .search-section .search:focus-within svg {
 }
 
 .main-screen-background {
-  background: url("../img/home-background.jpg?3") no-repeat center center;
+  background: url("../img/home-background.jpg?4") no-repeat center center;
   background-size: cover;
-  width: 265px;
+  width: 280px;
   height: 340px;
   right: 0;
   top: 20px;

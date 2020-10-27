@@ -152,9 +152,8 @@ header {
                             cursor: pointer;
 
                             p {
-                                @include SF-Pro-Display(bold);
+                                @include Inter(bold);
                                 font-size: 12px;
-                                line-height: 100%;
                                 color: $black;
                             }
                                 
