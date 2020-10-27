@@ -1185,7 +1185,7 @@ h4 {
   padding: 0 20px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 840px) {
   .container {
     padding: 0 60px;
   }
@@ -1238,7 +1238,6 @@ h4 {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 16px;
@@ -1246,6 +1245,7 @@ h4 {
       -ms-flex: 1;
           flex: 1;
   color: #D72D5C;
+  height: 100%;
 }
 
 .search-input input[type="text"]:focus {
@@ -1573,7 +1573,6 @@ header nav.navigation .search-section .search-input input[type="text"] {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 12px;
-  line-height: 16px;
   color: #6E6D7A;
   margin-left: 10px;
 }

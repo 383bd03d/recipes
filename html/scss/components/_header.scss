@@ -196,7 +196,6 @@ header {
                         input[type="text"] {
                             @include Inter(medium);
                             font-size: 12px;
-                            line-height: 16px;
                             color: $grey;
                             margin-left: 10px;
 

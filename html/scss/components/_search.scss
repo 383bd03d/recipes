@@ -22,11 +22,11 @@
             background-color: transparent;
             @include Inter(regular);
             font-size: 14px;
-            line-height: 16px;
             flex-wrap: wrap;
             margin-left: 16px;
             flex: 1;
             color: $primary;
+            height: 100%;
 
             &:focus {
                 outline: none;
