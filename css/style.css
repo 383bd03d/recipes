@@ -1211,7 +1211,7 @@ a:hover {
   opacity: .75;
 }
 
-a:hover > img {
+a > img:hover {
   opacity: 1;
 }
 
@@ -1779,10 +1779,17 @@ header nav.navigation .search-section .search:focus-within svg {
   border-radius: 8px;
 }
 
-.recipe-card-title > h3 {
+.recipe-card-title {
+  margin-bottom: 10px;
+}
+
+.recipe-card-title > a {
   font-size: 24px;
   line-height: 100%;
-  margin-bottom: 10px;
+}
+
+.recipe-card-title > a:visited {
+  color: #0D0C22;
 }
 
 .recipe-card-author {
@@ -1812,7 +1819,7 @@ header nav.navigation .search-section .search:focus-within svg {
 }
 
 .recipe-card .breadcrumbs {
-  margin: 15px 0 10px;
+  margin: 17px 0 10px;
 }
 
 .main-screen-background {

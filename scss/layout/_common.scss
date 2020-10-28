@@ -41,7 +41,7 @@ a {
         opacity: .75;
     }
 
-    &:hover > img {
+    > img:hover {
         opacity: 1;
     }
 }
