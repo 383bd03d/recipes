@@ -26,15 +26,13 @@
 
     &-content {
         margin-top: $base * 17;
+        grid-column-gap: $base * 2;
+        grid-row-gap: $base * 1.5;
+
         @media only screen and (min-width: $breakpoint-m) {
             margin-top: $base * 16;
             padding-bottom: $base * 3;
-        }
-
-        .search {
-            @media only screen and (min-width: $breakpoint-m) {
-                width: 400px;
-            }
+            grid-row-gap: $base * 2;
         }
 
         h1 {

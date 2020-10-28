@@ -1128,7 +1128,7 @@ grid.is-debug > :nth-child(6n+7) {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/Inter/Inter-Regular.woff2") format("woff2"), url("/fonts/Inter/Inter-Regular.woff") format("woff");
+  src: url("fonts/Inter/Inter-Regular.woff2") format("woff2"), url("fonts/Inter/Inter-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -1136,7 +1136,7 @@ grid.is-debug > :nth-child(6n+7) {
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("/fonts/Inter/Inter-Medium.woff2") format("woff2"), url("/fonts/Inter/Inter-Medium.woff") format("woff");
+  src: url("fonts/Inter/Inter-Medium.woff2") format("woff2"), url("fonts/Inter/Inter-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -1144,7 +1144,7 @@ grid.is-debug > :nth-child(6n+7) {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("/fonts/Inter/Inter-SemiBold.woff2") format("woff2"), url("/fonts/Inter/Inter-SemiBold.woff") format("woff");
+  src: url("fonts/Inter/Inter-SemiBold.woff2") format("woff2"), url("fonts/Inter/Inter-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -1152,7 +1152,7 @@ grid.is-debug > :nth-child(6n+7) {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/Inter/Inter-Bold.woff2") format("woff2"), url("/fonts/Inter/Inter-Bold.woff") format("woff");
+  src: url("fonts/Inter/Inter-Bold.woff2") format("woff2"), url("fonts/Inter/Inter-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -1160,7 +1160,7 @@ grid.is-debug > :nth-child(6n+7) {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/SF-Pro-Display/SFProDisplay-Bold.woff2") format("woff2"), url("/fonts/SF-Pro-Display/SFProDisplay-Bold.woff") format("woff");
+  src: url("fonts/SF-Pro-Display/SFProDisplay-Bold.woff2") format("woff2"), url("fonts/SF-Pro-Display/SFProDisplay-Bold.woff") format("woff");
 }
 
 /* ____________________ */
@@ -1832,18 +1832,15 @@ header nav.navigation .search-section .search:focus-within svg {
 
 .main-screen-content {
   margin-top: 340px;
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
 }
 
 @media only screen and (min-width: 1024px) {
   .main-screen-content {
     margin-top: 320px;
     padding-bottom: 60px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .main-screen-content .search {
-    width: 400px;
+    grid-row-gap: 40px;
   }
 }
 

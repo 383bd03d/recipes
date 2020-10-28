@@ -2,7 +2,7 @@
 
 /* ____________________ */
 
-$path: '/fonts';
+$path: 'fonts';
 
 @include font-face(Inter, '#{$path}/Inter/Inter-Regular', 400, normal, woff2 woff);
 @include font-face(Inter, '#{$path}/Inter/Inter-Medium', 500, normal, woff2 woff);
