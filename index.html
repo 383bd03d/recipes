@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Recipes | Discover something new</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-    </style>
+    <base href="./">
 </head>
 <body>
     <header role="navigation">
-        <grid columns-s="3" columns="10" columns-l="12" class="_is-debug">
+        <grid role="grid" columns-s="3" columns="10" columns-l="12" class="_is-debug">
             <aside class="hamburger" span-s="1" span-l="2">
                 <div class="hamburger-button">
                     <svg viewBox="0 0 15 14" fill="#0D0C22" xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +91,7 @@
         </grid>
     </header>
     <main class="home" role="main">
-        <grid columns-s="3" columns="10" columns-l="12" class="_is-debug">
+        <grid role="grid" columns-s="3" columns="10" columns-l="12" class="_is-debug">
             <div span-s="row" span="2-9" span-l="3-10" class="container">
                 <section class="main-screen">
                     <div class="main-screen-background"></div>
@@ -113,6 +112,127 @@
                             </div>
                         </div>
                     </div>
+                </section>
+                <section class="recipes-screen">
+                    <h2 class="section-header">
+                        Popular recipes
+                    </h2>
+                    <grid role="grid" columns-s="1" columns="2" class="recipes-wrapper">
+                        <div class="recipe-card">
+                            <a href="#" class="recipe-card-cover">
+                                <img src="./img/recipe-cover-1.jpg" alt="Блинчики домашние">
+                            </a>
+                            <nav class="breadcrumbs">
+                                <ol>
+                                    <li>
+                                        <a href="#">Десерты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Пироги</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                            <a class="recipe-card-title" href="#">
+                                <h3>Блинчики домашние</h3>
+                            </a>
+                            <div class="recipe-card-author">
+                                <svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6 7C7.89375 7 9.42857 5.4332 9.42857 3.5C9.42857 1.5668 7.89375 0 6 0C4.10625 0 2.57143 1.5668 2.57143 3.5C2.57143 5.4332 4.10625 7 6 7ZM8.4 7.875H7.95268C7.35804 8.15391 6.69643 8.3125 6 8.3125C5.30357 8.3125 4.64464 8.15391 4.04732 7.875H3.6C1.6125 7.875 0 9.52109 0 11.55V12.6875C0 13.4121 0.575893 14 1.28571 14H10.7143C11.4241 14 12 13.4121 12 12.6875V11.55C12 9.52109 10.3875 7.875 8.4 7.875Z"
+                                    />
+                                </svg>
+                                <a href="#">Евген Клопотенко</a>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#" class="recipe-card-cover">
+                                <img src="./img/recipe-cover-2.jpg" alt="Блинчики домашние">
+                            </a>
+                            <nav class="breadcrumbs">
+                                <ol>
+                                    <li>
+                                        <a href="#">Мясо, птица</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Запеченное мясо</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                            <a class="recipe-card-title" href="#">
+                                <h3>Курица баффало</h3>
+                            </a>
+                            <div class="recipe-card-author">
+                                <svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6 7C7.89375 7 9.42857 5.4332 9.42857 3.5C9.42857 1.5668 7.89375 0 6 0C4.10625 0 2.57143 1.5668 2.57143 3.5C2.57143 5.4332 4.10625 7 6 7ZM8.4 7.875H7.95268C7.35804 8.15391 6.69643 8.3125 6 8.3125C5.30357 8.3125 4.64464 8.15391 4.04732 7.875H3.6C1.6125 7.875 0 9.52109 0 11.55V12.6875C0 13.4121 0.575893 14 1.28571 14H10.7143C11.4241 14 12 13.4121 12 12.6875V11.55C12 9.52109 10.3875 7.875 8.4 7.875Z"
+                                    />
+                                </svg>
+                                <a href="#">Евген Клопотенко</a>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#" class="recipe-card-cover">
+                                <img src="./img/recipe-cover-3.jpg" alt="Блинчики домашние">
+                            </a>
+                            <nav class="breadcrumbs">
+                                <ol>
+                                    <li>
+                                        <a href="#">Закуски</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Тосты</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                            <a class="recipe-card-title" href="#">
+                                <h3>Авокадо Локс</h3>
+                            </a>
+                            <div class="recipe-card-author">
+                                <svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6 7C7.89375 7 9.42857 5.4332 9.42857 3.5C9.42857 1.5668 7.89375 0 6 0C4.10625 0 2.57143 1.5668 2.57143 3.5C2.57143 5.4332 4.10625 7 6 7ZM8.4 7.875H7.95268C7.35804 8.15391 6.69643 8.3125 6 8.3125C5.30357 8.3125 4.64464 8.15391 4.04732 7.875H3.6C1.6125 7.875 0 9.52109 0 11.55V12.6875C0 13.4121 0.575893 14 1.28571 14H10.7143C11.4241 14 12 13.4121 12 12.6875V11.55C12 9.52109 10.3875 7.875 8.4 7.875Z"
+                                    />
+                                </svg>
+                                <a href="#">Евген Клопотенко</a>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <a href="#" class="recipe-card-cover">
+                                <img src="./img/recipe-cover-4.jpg" alt="Блинчики домашние">
+                            </a>
+                            <nav class="breadcrumbs">
+                                <ol>
+                                    <li>
+                                        <a href="#">Десерты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Пироги</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                            <a class="recipe-card-title" href="#">
+                                <h3>Веганское печенье</h3>
+                            </a>
+                            <div class="recipe-card-author">
+                                <svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6 7C7.89375 7 9.42857 5.4332 9.42857 3.5C9.42857 1.5668 7.89375 0 6 0C4.10625 0 2.57143 1.5668 2.57143 3.5C2.57143 5.4332 4.10625 7 6 7ZM8.4 7.875H7.95268C7.35804 8.15391 6.69643 8.3125 6 8.3125C5.30357 8.3125 4.64464 8.15391 4.04732 7.875H3.6C1.6125 7.875 0 9.52109 0 11.55V12.6875C0 13.4121 0.575893 14 1.28571 14H10.7143C11.4241 14 12 13.4121 12 12.6875V11.55C12 9.52109 10.3875 7.875 8.4 7.875Z"
+                                    />
+                                </svg>
+                                <a href="#">Евген Клопотенко</a>
+                            </div>
+                        </div>
+                    </grid>
+                    <div class="load-more">
+                        <div class="load-more-button">
+                            <span>Load more</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="categories-screen">
+                    <h2 class="section-header">
+                        Categories
+                    </h2>
                 </section>
             </div>
         </grid>

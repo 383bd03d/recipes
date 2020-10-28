@@ -2,9 +2,11 @@
 
 @import '../components/search';
 @import '../components/header';
+@import '../components/breadcrumbs';
+@import '../components/recipe-card';
 
 .main-screen {
-
+    
     &-background {
         background: url('../img/home-background.jpg?7') no-repeat center center;
         background-size: cover;
@@ -26,6 +28,7 @@
         margin-top: $base * 17;
         @media only screen and (min-width: $breakpoint-m) {
             margin-top: $base * 16;
+            padding-bottom: $base * 3;
         }
 
         .search {
@@ -41,5 +44,11 @@
                 font-size: 48px;
             }
         }
+    }
+}
+
+.recipes {
+    &-wrapper {
+        //
     }
 }

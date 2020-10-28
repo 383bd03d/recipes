@@ -1,0 +1,36 @@
+.breadcrumbs {
+
+    ol, li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+
+
+    li > a {
+        text-decoration: none;
+        color: $primary-dark;
+        @include Inter(semibold);
+        font-size: 12px;
+        line-height: 100%;
+    }
+
+    li::after {
+        content: "";
+        display: inline-block;
+        mask: url('../img/arrow.svg?2') no-repeat;
+        width: 6px;
+        height: 3px;
+        background: $primary-light;
+        margin: 0 7px;
+        transform: rotate(-90deg);
+    }
+
+    li:last-child:after {
+        transform: rotate(0);
+        margin-top: -.0125px;
+    }
+
+}

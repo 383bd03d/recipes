@@ -32,3 +32,66 @@ h4 {
         margin-bottom: $base * 2;
     }
 }
+
+a {
+    text-decoration: none;
+    @include transition;
+
+    &:hover {
+        opacity: .75;
+    }
+
+    &:hover > img {
+        opacity: 1;
+    }
+}
+
+h2 {
+    &.section-header {
+        font-size: 28px;
+        line-height: 100%;
+        margin: $base * 3 0 $base * 2;
+
+        @media only screen and (min-width: $breakpoint-m) {
+            font-size: 36px;
+            margin: $base * 4 0 $base * 3;
+        }
+    }
+}
+
+.recipes-wrapper {
+    grid-column-gap: $base * 2;
+    grid-row-gap: $base * 2;
+    @media only screen and (min-width: $breakpoint-m) {
+        grid-row-gap: $base * 2.5;
+    }
+}
+
+.load-more {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: $base * 1.5;
+    @media only screen and (min-width: $breakpoint-m) {
+        padding: $base * 2 0 $base;
+    }
+
+    &-button span {
+        @include Inter(semibold);
+        color: $grey-middle;
+        font-size: 12px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            mask: url('../img/arrow.svg?2') no-repeat;
+            width: 8px;
+            height: 4px;
+            background: $grey-middle;
+            margin-left: 7px;
+        }
+    }
+}
