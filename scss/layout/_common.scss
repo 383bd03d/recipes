@@ -59,12 +59,16 @@ h2 {
     }
 }
 
-.recipes-wrapper {
-    grid-column-gap: $base * 2;
-    grid-row-gap: $base * 2;
-    @media only screen and (min-width: $breakpoint-m) {
-        grid-row-gap: $base * 2.5;
+.recipes {
+
+    &-wrapper {
+        grid-column-gap: $base * 2;
+        grid-row-gap: $base * 2;
+        @media only screen and (min-width: $breakpoint-m) {
+            grid-row-gap: $base * 2.5;
+        }
     }
+
 }
 
 .load-more {
@@ -76,6 +80,19 @@ h2 {
         padding: $base * 2 0 $base;
     }
 
+    &-button {
+        cursor: pointer;
+        @include transition;
+
+        &:hover {
+            opacity: .75;
+        }
+
+        &:active {
+            transform: translateY(2.5px);
+        }
+    }
+
     &-button span {
         @include Inter(semibold);
         color: $grey-middle;
@@ -83,6 +100,7 @@ h2 {
         line-height: 100%;
         display: flex;
         align-items: center;
+        padding: 5px;
 
         &::after {
             content: "";
