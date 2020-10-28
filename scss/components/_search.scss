@@ -22,10 +22,9 @@
             background-color: transparent;
             @include Inter(regular);
             font-size: 14px;
-            line-height: 16px;
-            flex-wrap: wrap;
+            height: 100%;
+            padding-bottom: 2px;
             margin-left: 16px;
-            flex: 1;
             color: $primary;
 
             &:focus {
@@ -35,8 +34,6 @@
             &::placeholder {
                 color: $primary;
                 opacity: 0.5;
-                font-size: 14px;
-                line-height: 16px;
             }
 
         }
