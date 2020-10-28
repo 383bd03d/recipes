@@ -1211,10 +1211,6 @@ a:hover {
   opacity: .75;
 }
 
-a > img:hover {
-  opacity: 1;
-}
-
 h2.section-header {
   font-size: 28px;
   line-height: 100%;
@@ -1351,21 +1347,29 @@ h2.section-header {
 .search-input input[type="text"]::-webkit-input-placeholder {
   color: #D72D5C;
   opacity: 0.5;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .search-input input[type="text"]:-ms-input-placeholder {
   color: #D72D5C;
   opacity: 0.5;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .search-input input[type="text"]::-ms-input-placeholder {
   color: #D72D5C;
   opacity: 0.5;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .search-input input[type="text"]::placeholder {
   color: #D72D5C;
   opacity: 0.5;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .search-input svg {
@@ -1676,21 +1680,29 @@ header nav.navigation .search-section .search-input input[type="text"] {
 header nav.navigation .search-section .search-input input[type="text"]::-webkit-input-placeholder {
   color: #6E6D7A;
   opacity: .5;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 header nav.navigation .search-section .search-input input[type="text"]:-ms-input-placeholder {
   color: #6E6D7A;
   opacity: .5;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 header nav.navigation .search-section .search-input input[type="text"]::-ms-input-placeholder {
   color: #6E6D7A;
   opacity: .5;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 header nav.navigation .search-section .search-input input[type="text"]::placeholder {
   color: #6E6D7A;
   opacity: .5;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 header nav.navigation .search-section .search-input svg {
