@@ -1297,7 +1297,7 @@ h2.section-header {
   position: relative;
 }
 
-.search input[type="text"] {
+.search input[type="search"] {
   background: transparent;
   border: 1px solid rgba(215, 45, 92, 0.25);
   border-radius: 8px;
@@ -1311,31 +1311,36 @@ h2.section-header {
   line-height: 3.6;
   padding: 0 20px 0 60px;
   color: #D72D5C;
+  -webkit-appearance: none;
 }
 
-.search input[type="text"]::-webkit-input-placeholder {
+.search input[type="search"]::-webkit-input-placeholder {
   color: #D72D5C;
   opacity: 0.5;
 }
 
-.search input[type="text"]:-ms-input-placeholder {
+.search input[type="search"]:-ms-input-placeholder {
   color: #D72D5C;
   opacity: 0.5;
 }
 
-.search input[type="text"]::-ms-input-placeholder {
+.search input[type="search"]::-ms-input-placeholder {
   color: #D72D5C;
   opacity: 0.5;
 }
 
-.search input[type="text"]::placeholder {
+.search input[type="search"]::placeholder {
   color: #D72D5C;
   opacity: 0.5;
 }
 
-.search input[type="text"]:focus {
+.search input[type="search"]:focus {
   outline: none;
   border: 1px solid #d72d5c;
+}
+
+.search input[type="search"]:placeholder-shown ~ span {
+  display: none;
 }
 
 .search-icon {
@@ -1632,7 +1637,7 @@ header nav.navigation .search-section .search {
   display: block;
 }
 
-header nav.navigation .search-section .search input[type="text"] {
+header nav.navigation .search-section .search input[type="search"] {
   border-color: rgba(110, 109, 122, 0.25);
   border-radius: 4px;
   height: 30px;
@@ -1645,27 +1650,27 @@ header nav.navigation .search-section .search input[type="text"] {
   line-height: 2.5;
 }
 
-header nav.navigation .search-section .search input[type="text"]::-webkit-input-placeholder {
+header nav.navigation .search-section .search input[type="search"]::-webkit-input-placeholder {
   color: #6E6D7A;
   opacity: .5;
 }
 
-header nav.navigation .search-section .search input[type="text"]:-ms-input-placeholder {
+header nav.navigation .search-section .search input[type="search"]:-ms-input-placeholder {
   color: #6E6D7A;
   opacity: .5;
 }
 
-header nav.navigation .search-section .search input[type="text"]::-ms-input-placeholder {
+header nav.navigation .search-section .search input[type="search"]::-ms-input-placeholder {
   color: #6E6D7A;
   opacity: .5;
 }
 
-header nav.navigation .search-section .search input[type="text"]::placeholder {
+header nav.navigation .search-section .search input[type="search"]::placeholder {
   color: #6E6D7A;
   opacity: .5;
 }
 
-header nav.navigation .search-section .search input[type="text"]:focus {
+header nav.navigation .search-section .search input[type="search"]:focus {
   border-color: #6e6d7a;
 }
 

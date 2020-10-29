@@ -1,7 +1,7 @@
 .search {
     position: relative;
 
-    input[type="text"] {
+    input[type="search"] {
         background: transparent;
         border: 1px solid rgba($primary, .25);
         border-radius: 8px;
@@ -13,6 +13,7 @@
         line-height: 3.6;
         padding: 0 20px 0 60px;
         color: $primary;
+        -webkit-appearance: none;
 
         &::placeholder {
             color: $primary;
@@ -22,6 +23,10 @@
         &:focus {
             outline: none;
             border: 1px solid rgba($primary, 1);
+        }
+
+        &:placeholder-shown ~ span {
+            display: none;;
         }
     }
 
