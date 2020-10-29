@@ -1309,30 +1309,21 @@ h2.section-header {
   font-weight: 400;
   font-size: 14px;
   padding: 15px 20px 16px 60px;
-  line-height: 100%;
   vertical-align: middle;
   color: #D72D5C;
   -webkit-appearance: none;
 }
 
-.search input[type="search"]::-webkit-input-placeholder {
+.search input[type="search"]::-webkit-input-placeholder, .search input[type="search"]::-webkit-input-placeholder {
   color: #D72D5C;
   opacity: 0.5;
+  vertical-align: middle;
 }
 
-.search input[type="search"]:-ms-input-placeholder {
+.search input[type="search"]::placeholder, .search input[type="search"]::-webkit-input-placeholder {
   color: #D72D5C;
   opacity: 0.5;
-}
-
-.search input[type="search"]::-ms-input-placeholder {
-  color: #D72D5C;
-  opacity: 0.5;
-}
-
-.search input[type="search"]::placeholder {
-  color: #D72D5C;
-  opacity: 0.5;
+  vertical-align: middle;
 }
 
 .search input[type="search"]:focus {

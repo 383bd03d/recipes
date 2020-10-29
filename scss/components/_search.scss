@@ -11,14 +11,15 @@
         @include Inter(regular);
         font-size: 14px;
         padding: 15px 20px 16px 60px;
-        line-height: 100%;
         vertical-align: middle;
         color: $primary;
         -webkit-appearance: none;
 
-        &::placeholder {
+        &::placeholder,
+        &::-webkit-input-placeholder {
             color: $primary;
             opacity: 0.5;
+            vertical-align: middle;
         }
 
         &:focus {
