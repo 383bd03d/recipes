@@ -38,8 +38,6 @@ h4 {
 }
 
 a {
-    $a: &;
-
     text-decoration: none;
     @include transition;
 
@@ -52,7 +50,7 @@ h2 {
     &.section-header {
         font-size: 28px;
         line-height: 100%;
-        margin: $base * 3 0 $base * 2;
+        margin: $base * 3 0 $base * 1.75;
 
         @media only screen and (min-width: $breakpoint-m) {
             font-size: 36px;
