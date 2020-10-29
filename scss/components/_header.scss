@@ -192,11 +192,10 @@ header {
                         border-radius: 4px;
                         height: 30px;
                         width: 200px;
-                        padding: 0 10px 0 35px;
+                        padding: 5px 10px 6px 35px;
                         @include Inter(medium);
                         font-size: 12px;
                         color: $grey;
-                        line-height: 2.5;
 
                         &::placeholder {
                             color: $grey;
