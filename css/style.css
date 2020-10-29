@@ -1316,21 +1316,25 @@ h2.section-header {
 
 .search input[type="search"]::-webkit-input-placeholder {
   color: #D72D5C;
+  line-height: 100%;
   opacity: 0.5;
 }
 
 .search input[type="search"]:-ms-input-placeholder {
   color: #D72D5C;
+  line-height: 100%;
   opacity: 0.5;
 }
 
 .search input[type="search"]::-ms-input-placeholder {
   color: #D72D5C;
+  line-height: 100%;
   opacity: 0.5;
 }
 
 .search input[type="search"]::placeholder {
   color: #D72D5C;
+  line-height: 100%;
   opacity: 0.5;
 }
 
