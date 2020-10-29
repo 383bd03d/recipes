@@ -1310,36 +1310,29 @@ h2.section-header {
   font-size: 14px;
   padding: 15px 20px 16px 60px;
   line-height: 100%;
+  vertical-align: middle;
   color: #D72D5C;
   -webkit-appearance: none;
 }
 
 .search input[type="search"]::-webkit-input-placeholder {
   color: #D72D5C;
-  line-height: normal;
   opacity: 0.5;
-  line-height: 100%;
 }
 
 .search input[type="search"]:-ms-input-placeholder {
   color: #D72D5C;
-  line-height: normal;
   opacity: 0.5;
-  line-height: 100%;
 }
 
 .search input[type="search"]::-ms-input-placeholder {
   color: #D72D5C;
-  line-height: normal;
   opacity: 0.5;
-  line-height: 100%;
 }
 
 .search input[type="search"]::placeholder {
   color: #D72D5C;
-  line-height: normal;
   opacity: 0.5;
-  line-height: 100%;
 }
 
 .search input[type="search"]:focus {
