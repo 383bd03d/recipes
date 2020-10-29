@@ -1,9 +1,10 @@
 header {
     height: 60px;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    background-color: rgba($background, .15);
-    backdrop-filter: blur(35px);
+    z-index: 99;
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255,255,255,0.7);
 
     grid {
         position: relative;
@@ -184,40 +185,36 @@ header {
                 }
 
                 .search {
-                    
-                    border-color: rgba($grey, 0.25);
-                    border-radius: 4px;
-                    width: 200px;
-                    height: 30px;
+                    display: block;
 
-                    &-input {
-                        padding: 0 10px;
-                        
-                        input[type="text"] {
-                            @include Inter(medium);
-                            font-size: 12px;
+                    input[type="text"] {
+                        border-color: rgba($grey, 0.25);
+                        border-radius: 4px;
+                        height: 30px;
+                        width: 200px;
+                        padding: 0 10px 0 35px;
+                        @include Inter(medium);
+                        font-size: 12px;
+                        color: $grey;
+                        line-height: 2.5;
+
+                        &::placeholder {
                             color: $grey;
-                            margin-left: 10px;
-
-                            &::placeholder {
-                                color: $grey;
-                                opacity: .5;
-                            }
+                            opacity: .5;
                         }
-    
+
+                        &:focus {
+                            border-color: rgba($grey, 1);
+                        }
+                    }
+
+                    &-icon {
+                        width: 35px;
+
                         svg {
                             width: 12px;
                             height: 12px;
                             fill: $grey;
-                            opacity: .5;
-                        }
-                    }
-
-                    &:focus-within {
-                        border-color: rgba($grey, 1);
-
-                        svg {
-                            opacity: 1;
                         }
                     }
     

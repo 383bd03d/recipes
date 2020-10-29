@@ -5,41 +5,72 @@
 @import '../components/breadcrumbs';
 @import '../components/recipe-card';
 
-.main-screen {
-    
-    &-background {
-        background: url('../img/home-background.jpg?7') no-repeat center center;
-        background-size: cover;
-        width: 280px;
-        height: 340px;
-        right: 0;
-        top: $base;
-        position: absolute;
-        z-index: -1;
+.home {
 
-        @media only screen and (min-width: $breakpoint-m) {
-            width: 840px;
-            height: 580px;
-            top: 0;
+    .main-screen {
+    
+        &-background {
+            background: url('../img/home-background.jpg?7') no-repeat center center;
+            background-size: cover;
+            width: 280px;
+            height: 340px;
+            right: 0;
+            top: $base;
+            position: absolute;
+            z-index: -1;
+    
+            @media only screen and (min-width: $breakpoint-m) {
+                width: 840px;
+                height: 580px;
+                top: 0;
+            }
+        }
+    
+        &-content {
+            margin-top: $base * 17;
+            grid-column-gap: $base * 2;
+            grid-row-gap: $base * 1.5;
+    
+            @media only screen and (min-width: $breakpoint-m) {
+                margin-top: $base * 16;
+                padding-bottom: $base * 3;
+                grid-row-gap: $base * 2;
+            }
+    
+            h1 {
+                font-size: 36px;
+                line-height: 100%;
+                @media only screen and (min-width: $breakpoint-m) {
+                    font-size: 48px;
+                }
+            }
         }
     }
-
-    &-content {
-        margin-top: $base * 17;
-        grid-column-gap: $base * 2;
-        grid-row-gap: $base * 1.5;
-
-        @media only screen and (min-width: $breakpoint-m) {
-            margin-top: $base * 16;
-            padding-bottom: $base * 3;
-            grid-row-gap: $base * 2;
+    
+    .categories {
+        
+        &-wrapper {
+            grid-column-gap: $base * 2;
+            grid-row-gap: $base * .5;
+            @media only screen and (min-width: $breakpoint-m) {
+                grid-row-gap: $base * .5;
+            }
         }
 
-        h1 {
-            font-size: 36px;
-            line-height: 100%;
-            @media only screen and (min-width: $breakpoint-m) {
-                font-size: 48px;
+        &-button {
+            a {
+                display: flex;
+                align-items: center;
+                > svg {
+                    height: 15px;
+                    fill: $grey-semilight;
+                }
+
+                > span {
+                    @include Inter(semibold);
+                    font-size: 12px;
+                    color: $black;
+                }
             }
         }
     }

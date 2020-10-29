@@ -34,11 +34,13 @@ h4 {
 }
 
 a {
+    $a: &;
+
     text-decoration: none;
     @include transition;
 
     &:hover {
-        opacity: .75;
+        opacity: .7;
     }
 }
 
