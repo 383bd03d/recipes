@@ -1164,6 +1164,10 @@ grid.is-debug > :nth-child(6n+7) {
 }
 
 /* ____________________ */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 h1,
 h2,
 h3,
@@ -1849,24 +1853,52 @@ header nav.navigation .search-section .search-icon svg {
   }
 }
 
-.home .categories-button a {
+.home .categories-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 50px;
+  width: 100%;
+  background: #F3F3F4;
+  border-radius: 8px;
 }
 
-.home .categories-button a > svg {
+.home .categories-button > span {
+  height: 100%;
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .categories-button > span > svg {
   height: 15px;
   fill: #C1C1C5;
 }
 
-.home .categories-button a > span {
+.home .categories-button > h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 12px;
   color: #0D0C22;
+}
+
+.home .categories-button:hover {
+  background: rgba(193, 193, 197, 0.35);
+  opacity: 1;
+}
+
+.home .categories-button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 /*# sourceMappingURL=style.css.map */

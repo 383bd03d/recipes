@@ -58,20 +58,43 @@
         }
 
         &-button {
-            a {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+            background: $grey-light;
+            border-radius: 8px;
+
+
+            > span {
+
+                height: 100%;
+                width: $base * 3;
                 display: flex;
+                justify-content: center;
                 align-items: center;
+
                 > svg {
                     height: 15px;
                     fill: $grey-semilight;
                 }
+            }
 
-                > span {
-                    @include Inter(semibold);
-                    font-size: 12px;
-                    color: $black;
-                }
+            > h3 {
+                @include Inter(semibold);
+                font-size: 12px;
+                color: $black;
+            }
+
+            &:hover {
+                background: rgba($grey-semilight, .35);
+                opacity: 1;
+            }
+
+            &:active {
+                transform: scale(.99);
             }
         }
+        
     }
 }
