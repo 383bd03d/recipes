@@ -1252,7 +1252,7 @@ h2.section-header {
 
 @media only screen and (min-width: 1024px) {
   .load-more {
-    padding: 40px 0 20px;
+    padding-top: 40px;
   }
 }
 
@@ -1267,8 +1267,8 @@ h2.section-header {
 }
 
 .load-more-button:active {
-  -webkit-transform: translateY(2.5px);
-          transform: translateY(2.5px);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .load-more-button span {
@@ -1879,6 +1879,117 @@ header nav.navigation .search-section .search-icon svg {
   color: #6E6D7A;
   padding: 7px 15px;
   border-radius: 4px;
+}
+
+footer {
+  width: 100%;
+  background: #F3F3F4;
+  margin-top: 100px;
+  padding-top: 60px;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    padding: 60px 0;
+  }
+}
+
+footer .footer-wrapper {
+  padding: 0 20px;
+  grid-row-gap: 60px;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer .footer-wrapper {
+    padding: 0;
+    grid-row-gap: 20px;
+  }
+}
+
+footer .logo svg {
+  width: 97px;
+  height: 20px;
+  fill: #0D0C22;
+}
+
+footer .description span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #0D0C22;
+  margin-top: 15px;
+}
+
+footer .logo.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .sitemap-directory a,
+footer .sitemap-directory label {
+  font-size: 12px;
+  line-height: 17px;
+}
+
+footer .sitemap-directory > label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #0D0C22;
+}
+
+footer .sitemap-directory-list {
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+footer .sitemap-directory-list grid {
+  grid-row-gap: 20px;
+}
+
+footer .sitemap-directory-list a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: rgba(13, 12, 34, 0.85);
+}
+
+footer .sitemap-directory-list a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 1px solid rgba(193, 193, 197, 0.25);
+}
+
+footer .copyright span {
+  padding: 30px 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: rgba(13, 12, 34, 0.85);
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer .copyright {
+    border: none;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer .copyright span {
+    padding: 0;
+  }
 }
 
 .home .main-screen-background {

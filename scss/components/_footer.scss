@@ -1,0 +1,102 @@
+footer {
+    width: 100%;
+    background: $grey-light;
+    margin-top: 100px;
+    padding-top: $base * 3;
+
+    @media only screen and (min-width: $breakpoint-m) {
+        padding: $base * 3 0;
+    }
+
+    .footer-wrapper {
+        padding: 0 $base;
+        grid-row-gap: $base * 3;
+
+        @media only screen and (min-width: $breakpoint-m) {
+            padding: 0;
+            grid-row-gap: $base;
+        }
+    }
+
+    .logo {
+        svg {
+            width: 97px;
+            height: 20px;
+            fill: $black;
+        }
+    }
+
+    .description {
+        span {
+            @include Inter(regular);
+            font-size: 12px;
+            line-height: 17px;
+            color: $black;
+            margin-top: $base * .75;
+        }
+    }
+
+    .logo.description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sitemap {
+
+        &-directory {
+            a,
+            label {
+                font-size: 12px;
+                line-height: 17px;
+            }
+
+            > label {
+                @include Inter(bold);
+                color: $black;
+            }
+
+            &-list {
+                padding: 0;
+                margin: $base 0 0 0;
+
+                #{$raster-element} {
+                    //grid-column-gap: $base * 2;
+                    //grid-row-gap: $base * 2;
+                    
+                    grid-row-gap: $base;
+                    
+                }
+
+                a {
+                    @include Inter(regular);
+                    color: rgba($black, .85);
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid rgba($grey-semilight, .25);
+
+        span {
+            padding: $base * 1.5 0;
+            @include Inter(semibold);
+            color: rgba($black, .85);
+            font-size: 12px;
+        }
+
+        @media only screen and (min-width: $breakpoint-m) {
+            border: none;
+            justify-content: flex-start;
+
+            span {
+                padding: 0;
+            }
+        }
+    }
+}
