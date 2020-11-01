@@ -2413,15 +2413,27 @@ footer .copyright span {
     width: 840px;
     height: 580px;
     top: 0;
-    right: -30%;
+    right: -35%;
   }
 }
 
-@media only screen and (min-width: 1690px) {
+@media only screen and (min-width: 1965px) {
+  .home .main-screen-background {
+    right: -25%;
+  }
+}
+
+@media only screen and (min-width: 2165px) {
   .home .main-screen-background {
     width: 920px;
     height: 640px;
     top: 0;
+    right: -25%;
+  }
+}
+
+@media only screen and (min-width: 2415px) {
+  .home .main-screen-background {
     right: -15%;
   }
 }
