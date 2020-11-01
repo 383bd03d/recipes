@@ -4,7 +4,7 @@ footer {
     margin-top: 100px;
     padding-top: $base * 3;
 
-    @media only screen and (min-width: $breakpoint-m) {
+    @media only screen and (min-width: $breakpoint-s) {
         padding: $base * 3 0;
     }
 
@@ -12,9 +12,8 @@ footer {
         padding: 0 $base;
         grid-row-gap: $base * 3;
 
-        @media only screen and (min-width: $breakpoint-m) {
+        @media only screen and (min-width: $breakpoint-s) {
             padding: 0;
-            grid-row-gap: $base;
         }
     }
 
@@ -90,7 +89,7 @@ footer {
             font-size: 12px;
         }
 
-        @media only screen and (min-width: $breakpoint-m) {
+        @media only screen and (min-width: $breakpoint-s) {
             border: none;
             justify-content: flex-start;
 

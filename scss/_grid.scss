@@ -1,13 +1,15 @@
 $raster-element: grid !default;
 $grid-attribute: columns !default;
 $cell-attribute: span !default;
-$columns: 12 !default;
+$columns: 16 !default;
 $default-cols: 4 !default;
 
-$small-breakpoint: $breakpoint-s - 1;
-$small-suffix: s;
-$large-breakpoint: $breakpoint-l;
+$medium-breakpoint: $breakpoint-s;
+$medium-suffix: m;
+$large-breakpoint: $breakpoint-m;
 $large-suffix: l;
+$xlarge-breakpoint: $breakpoint-l;
+$xlarge-suffix: xl;
 
 $include-debug: true !default;
 
@@ -84,12 +86,16 @@ $include-debug: true !default;
 
   @include make-cells();
 
-  @media (max-width: #{$small-breakpoint}) {
-    @include make-cells($small-suffix);
+  @media (min-width: #{$medium-breakpoint}) {
+    @include make-cells($medium-suffix);
   }
 
   @media (min-width: #{$large-breakpoint - 1}) {
     @include make-cells($large-suffix);
+  }
+
+  @media (min-width: #{$xlarge-breakpoint}) {
+    @include make-cells($xlarge-suffix);
   }
 
   @if $include-debug {

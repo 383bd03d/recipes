@@ -8,9 +8,10 @@
 @import '../components/footer';
 
 .home {
+    overflow-x: hidden;
 
     .main-screen {
-    
+
         &-background {
             background: url('../img/home-background.jpg?7') no-repeat center center;
             background-size: cover;
@@ -20,11 +21,47 @@
             top: $base;
             position: absolute;
             z-index: -1;
+
+            @media only screen and (min-width: $breakpoint-s - 150) {
+                width: 460px;
+                height: 400px;
+                top: 0;
+                right: -10%;
+            }
+
+            @media only screen and (min-width: $breakpoint-s) {
+                width: 520px;
+                height: 480px;
+                top: 0;
+                right: -25%;
+            }
     
+            @media only screen and (min-width: $breakpoint-s + 100) {
+                width: 620px;
+                height: 520px;
+                top: 0;
+                right: -20%;
+            }
+
+            @media only screen and (min-width: $breakpoint-s + 250) {
+                width: 720px;
+                height: 580px;
+                top: 0;
+                right: -20%;
+            }
+            
             @media only screen and (min-width: $breakpoint-m) {
                 width: 840px;
                 height: 580px;
                 top: 0;
+                right: -30%;
+            }
+
+            @media only screen and (min-width: $breakpoint-l) {
+                width: 920px;
+                height: 640px;
+                top: 0;
+                right: -15%;
             }
         }
     

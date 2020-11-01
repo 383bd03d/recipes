@@ -9,8 +9,8 @@
 </head>
 <body>
     <header role="navigation">
-        <grid role="grid" columns-s="3" columns="10" columns-l="12" class="_is-debug">
-            <aside class="hamburger" span-s="1" span-l="2">
+        <grid role="grid" columns="3" columns-m="10" columns-l="12" columns-xl="16" class="_is-debug">
+            <aside class="hamburger" span="1" span-l="2" span-xl="4">
                 <div class="hamburger-button">
                     <svg viewBox="0 0 15 14" fill="#0D0C22" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -19,7 +19,7 @@
                     </svg>
                 </div>
             </aside>
-            <nav class="navigation" span-s="1" span="8" span-l="8">
+            <nav class="navigation" span="1" span-m="8" span-l="8" span-xl="8">
               <div class="logo">
                 <a href="#">
                     <svg viewBox="0 0 80 17" fill="#0D0C22" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,7 @@
                 </div>
               </div>
             </nav>
-            <aside class="search-mobile" span-s="1" span-l="2">
+            <aside class="search-mobile" span="1" span-l="2" span-xl="4">
                 <div class="search-mobile-button">
                     <svg viewBox="0 0 14 14" fill="#0D0C22" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -91,17 +91,17 @@
         </grid>
     </header>
     <main class="home" role="main">
-        <grid role="grid" columns-s="3" columns="10" columns-l="12" class="_is-debug">
-            <div span-s="row" span="2-9" span-l="3-10" class="container">
+        <grid role="grid" columns="3" columns-m="10" columns-l="12" columns-xl="16" class="_is-debug">
+            <div span="row" span-m="2-9" span-l="3-10" span-xl="5-12" class="container">
                 <section class="main-screen">
                     <div class="main-screen-background"></div>
-                    <grid columns-s="1" columns="2" class="main-screen-content">
-                        <h1 span="row">
+                    <grid columns="1" columns-m="2" class="main-screen-content">
+                        <h1 span-m="row">
                             Discover
                             <br/>
                             something new
                         </h1>
-                        <div span-s="row" span="1" class="search">
+                        <div span="row" span-m="1" class="search">
                             <span class="search-icon">
                                 <svg viewBox="0 0 14 14" fill="#0D0C22" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -117,7 +117,7 @@
                     <h2 class="section-header">
                         Popular recipes
                     </h2>
-                    <grid role="grid" columns-s="1" columns="2" class="recipes-wrapper">
+                    <grid role="grid" columns="1" columns-m="2" class="recipes-wrapper">
                         <div class="recipe-card">
                             <a href="#" class="recipe-card-cover">
                                 <img src="./img/recipe-cover-1.jpg" alt="Блинчики домашние">
@@ -233,7 +233,7 @@
                     <h2 class="section-header">
                         Categories
                     </h2>
-                    <grid role="grid" columns-s="1" columns="2" class="categories-wrapper">
+                    <grid role="grid" columns="1" columns-m="2" class="categories-wrapper">
                         <a href="#" class="categories-button">
                             <span>
                                 <svg viewBox="0 0 9 10" xmlns="http://www.w3.org/2000/svg">
@@ -305,7 +305,7 @@
                     <h2 class="section-header">
                         Most active authors
                     </h2>
-                    <grid role="grid" columns-s="1" columns="2" class="authors-wrapper">
+                    <grid role="grid" columns="1" columns-m="2" class="authors-wrapper">
                         <div class="author-card">
                             <a href="#" class="author-card-photo">
                                 <img src="./img/profile-photo-1.jpg" alt="Евген Клопотенко" />
@@ -369,8 +369,8 @@
         </grid>
     </main>
     <footer>
-        <grid columns-s="3" columns="10" columns-l="12" role="grid" class="footer-wrapper">
-            <div span-s="row" span="2+2" span-l="3-4" class="logo description">
+        <grid columns="3" columns-m="10" columns-l="12" columns-xl="16" role="grid" class="footer-wrapper">
+            <div span="row" span-m="2-3" span-l="3-4" span-xl="5-6" class="logo description">
                 <svg viewBox="0 0 80 17" fill="#0D0C22" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M22.9718 6.99628V3.64725H25.8436C26.4447 3.64725 26.8955 3.78054 27.1961 4.04713C27.4966 4.30261 27.6469 4.71916 27.6469 5.29677C27.6469 5.89659 27.4966 6.3298 27.1961 6.59639C26.8955 6.86298 26.4447 6.99628 25.8436 6.99628H22.9718ZM20.3503 1.6145V13.5111H22.9718V8.8624H25.5932C26.2499 8.8624 26.723 9.0068 27.0124 9.29561C27.3018 9.58441 27.4911 10.0398 27.5801 10.6619C27.6469 11.1395 27.697 11.6394 27.7304 12.1614C27.7638 12.6835 27.8528 13.1334 27.9975 13.5111H30.619C30.4965 13.3444 30.4019 13.1445 30.3351 12.9112C30.2794 12.6669 30.2349 12.4114 30.2015 12.1448C30.1793 11.8782 30.1626 11.6172 30.1514 11.3617C30.1403 11.1062 30.1292 10.884 30.118 10.6952C30.0958 10.3953 30.0513 10.0954 29.9845 9.79547C29.9288 9.49555 29.8342 9.22341 29.7006 8.97903C29.567 8.72355 29.3945 8.50695 29.183 8.32922C28.9715 8.14039 28.7044 8.00154 28.3816 7.91268V7.87935C29.0494 7.61276 29.5281 7.22399 29.8175 6.71302C30.118 6.20206 30.2683 5.59668 30.2683 4.89688C30.2683 4.44146 30.1848 4.01936 30.0179 3.63058C29.862 3.2307 29.6283 2.8808 29.3166 2.58089C29.016 2.28098 28.6487 2.04771 28.2146 1.88109C27.7916 1.70337 27.313 1.6145 26.7787 1.6145H20.3503Z"
@@ -401,17 +401,16 @@
                 </svg>
                 <span>
                     Recipes.com is a huge data base that
-                    <br/>
                     collect recipes was found everywhere
                 </span>
             </div>
-            <div span-s="row" span="" span-l="6-10" class="sitemap">
+            <div span="row" span-m="6-9" span-l="6-10" span-xl="8-12" class="sitemap">
                 <div class="sitemap-directory">
                     <label for="sitemap-directory-list">
                         Categories
                     </label>
                     <ul class="sitemap-directory-list">
-                      <grid columns-s="2" columns-l="4">
+                      <grid columns="2" columns-l="4">
                         <li>
                             <a href="">Cooking style</a>
                         </li>
@@ -449,7 +448,7 @@
                     </ul>
                 </div>
             </div>
-            <div span-s="row" span-l="3-4" class="copyright">
+            <div span="row" span-m="2-4" span-l="3-4" span-xl="5-6" class="copyright">
                 <span>© 2020 Recipes.com</span>
             </div>
         </grid>
