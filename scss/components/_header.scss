@@ -7,241 +7,270 @@ header {
 
     .header {
         height: 60px;
+    }
 
-        .hamburger {
-            align-items: flex-start;
-            padding-left: $base;
+    .hamburger {
+        align-items: flex-start;
+        padding-left: $base;
+
+        &-button {
+            $b: &;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 15px + $base * 2;
+            height: 100%;
+            margin-left: -$base;
     
-            &-button {
-                $b: &;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 15px + $base * 2;
-                height: 100%;
-                margin-left: -$base;
-        
-                svg {
-                    width: 15px;
-                    height: 14px; 
-                    fill: $black;
+            svg {
+                width: 15px;
+                height: 14px; 
+                fill: $black;
 
-                    &.times {
-                        display: none;
-                        fill: $grey-middle;
-                        width: 12px;
-                        height: 12px;
-                    }
-                }
-
-                &.active {
-
-                    svg:first-child {
-                        display: none;
-                    }
-
-                    svg.times {
-                        display: block;
-                    }
-                    
-                }
-    
-                @media only screen and (min-width: $breakpoint-s) {
+                &.times {
                     display: none;
+                    fill: rgba($black, .5);
+                    width: 12px;
+                    height: 12px;
                 }
             }
-            
-        }
-    
-        .search-mobile {
-            align-items: flex-end;
-            padding-right: $base;
-    
-            &-button {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 14px + $base * 2;
-                height: 100%;
-                margin-right: -$base;
-        
-                svg {
-                    width: 14px;
-                    height: 14px; 
-                    fill: $black;
-                }
-    
-                @media only screen and (min-width: $breakpoint-s) {
+
+            &.active {
+
+                svg:first-child {
                     display: none;
                 }
-    
-            }
-    
-        }
-    
-        nav {
-        
-            &.navigation {
-                > * {
-                    flex: 1;
-                    justify-content: center;
-                }
-    
-                align-items: center;
-        
-                @media only screen and (min-width: $breakpoint-s) {
-                    flex-direction: row;
-                }
-        
-                .logo {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100%;
-                    
-                    @media only screen and (min-width: $breakpoint-s) {
-                        align-items: flex-start;
-                        margin-right: auto;
-                    }
-    
-                    a {
-                        height: 100%;
-                        padding: 0 15px;
-    
-                        @media only screen and (min-width: $breakpoint-s) {
-                            padding: 0;
-                        }
-                    }
-    
-                    svg {
-                        width: 80px;
-                        height: 17px;
-                        fill: $black;
-            
-            
-                        @media only screen and (min-width: $breakpoint-s) {
-                            width: 96.8px;
-                            height: 20px;
-                        }
-                    }
-            
+
+                svg.times {
+                    display: block;
                 }
                 
-                .menu {
+            }
+
+            @media only screen and (min-width: $breakpoint-s) {
+                display: none;
+            }
+        }
+        
+    }
+
+    .search-mobile {
+        align-items: flex-end;
+        padding-right: $base;
+
+        &-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 14px + $base * 2;
+            height: 100%;
+            margin-right: -$base;
     
-                    height: 100%;
+            svg {
+                width: 14px;
+                height: 14px; 
+                fill: $black;
+
+                &.times {
                     display: none;
+                    fill: rgba($black, .5);
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            &.active {
+
+                svg:first-child {
+                    display: none;
+                }
+
+                svg.times {
+                    display: block;
+                }
+                
+            }
+
+            @media only screen and (min-width: $breakpoint-s) {
+                display: none;
+            }
+
+        }
+
+        &-menu {
+            max-height: 0;
+            opacity: 0;
+
+            &.active {
+                max-height: 100vh;
+                opacity: 1;
+            }
+        }
+        
+    }
+
+    nav {
     
+        &.navigation {
+            > * {
+                flex: 1;
+                justify-content: center;
+            }
+
+            align-items: center;
+    
+            @media only screen and (min-width: $breakpoint-s) {
+                flex-direction: row;
+            }
+    
+            .logo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                
+                @media only screen and (min-width: $breakpoint-s) {
+                    align-items: flex-start;
+                    margin-right: auto;
+                }
+
+                a {
+                    height: 100%;
+                    padding: 0 15px;
+
                     @media only screen and (min-width: $breakpoint-s) {
-                        display: flex;
-                        flex-direction: row;
-                    }
-    
-                    ul,
-                    li,
-                    span,
-                    a {
-                        height: 100%;
-                    }
-    
-                    ul {
-    
                         padding: 0;
-                        margin: 0;
-                        flex-direction: row;
-    
-                        li {
-                            padding: 0 25px;
-                            @include transition;
-    
-                            span,
-                            a {
-                                display: flex;
-                                flex-direction: row;
-                                cursor: pointer;
-    
-                                p {
-                                    @include Inter(bold);
-                                    font-size: 12px;
-                                    color: $black;
-                                    @include transition;
-                                }
-                                    
-                                svg {
-                                        width: 6px;
-                                        height: 3px;
-                                        fill: $black;
-                                        margin-left: 7px;
-                                        @include transition;
-                                }
+                    }
+                }
+
+                svg {
+                    width: 80px;
+                    height: 17px;
+                    fill: $black;
+        
+        
+                    @media only screen and (min-width: $breakpoint-s) {
+                        width: 96.8px;
+                        height: 20px;
+                    }
+                }
+        
+            }
+            
+            .menu {
+
+                height: 100%;
+                display: none;
+
+                @media only screen and (min-width: $breakpoint-s) {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                ul,
+                li,
+                span,
+                a {
+                    height: 100%;
+                }
+
+                ul {
+
+                    padding: 0;
+                    margin: 0;
+                    flex-direction: row;
+
+                    li {
+                        padding: 0 25px;
+                        @include transition;
+
+                        span,
+                        a {
+                            display: flex;
+                            flex-direction: row;
+                            cursor: pointer;
+
+                            p {
+                                @include Inter(bold);
+                                font-size: 12px;
+                                color: $black;
                             }
-                            
-                            &.active {
-                                svg {
-                                    transform: rotate(-180deg);
-                                }
+                                
+                            svg {
+                                    width: 6px;
+                                    height: 3px;
+                                    fill: $black;
+                                    margin-left: 7px;
+                                    @include toogle-transition;
                             }
                         }
                         
-                    }
-                }
-    
-    
-                .search-section {
-                    
-                    margin-left: auto;
-                    height: 100%;
-                    display: none;
-    
-                    @media only screen and (min-width: $breakpoint-s) {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-end;
-                    }
-    
-                    .search {
-                        display: block;
-    
-                        input[type="search"] {
-                            border-color: rgba($grey, 0.25);
-                            border-radius: 4px;
-                            height: 30px;
-                            width: 200px;
-                            padding: 5px 10px 6px 35px;
-                            @include Inter(medium);
-                            font-size: 12px;
-                            color: $grey;
-    
-                            &::placeholder {
-                                color: $grey;
-                                opacity: .5;
-                            }
-    
-                            &:focus {
-                                border-color: rgba($grey, 1);
-                            }
-                        }
-    
-                        &-icon {
-                            width: 35px;
-    
+                        &.active {
                             svg {
-                                width: 12px;
-                                height: 12px;
-                                fill: $grey;
+                                transform: rotate(-180deg);
                             }
                         }
-        
                     }
-    
+                    
                 }
             }
+
+
+            .search-section {
+                
+                margin-left: auto;
+                height: 100%;
+                display: none;
+
+                @media only screen and (min-width: $breakpoint-s) {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+
+                .search {
+                    display: block;
+
+                    input[type="search"] {
+                        border-color: rgba($grey, 0.25);
+                        border-radius: 4px;
+                        height: 30px;
+                        width: 200px;
+                        padding: 5px 10px 6px 35px;
+                        @include Inter(medium);
+                        font-size: 12px;
+                        color: $grey;
+
+                        &::placeholder {
+                            color: $grey;
+                            opacity: .5;
+                        }
+
+                        &:focus {
+                            border-color: rgba($grey, 1);
+                        }
+                    }
+
+                    &-icon {
+                        width: 35px;
+
+                        svg {
+                            width: 12px;
+                            height: 12px;
+                            fill: $grey;
+                        }
+                    }
     
+                }
+
+            }
         }
+
     }
+    
 
     grid {
         position: relative;
@@ -255,7 +284,9 @@ header {
         }
     }
 
+    .search-mobile-menu,
     .dropdown-menu {
+        @include toogle-transition;
         border-top: 1px solid rgba($grey-semilight, .25);
         overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
@@ -266,7 +297,6 @@ header {
     }
 
     .dropdown-menu {
-        transition: all .5s ease;
         opacity: 0;
         max-height: 0;
         overflow: auto;
