@@ -261,15 +261,10 @@ header {
     }
 
     .dropdown-menu {
-        @include transition;
+        transition: all .5s ease;
         opacity: 0;
-        display: none;
-        height: 100vh;
+        max-height: 0;
         overflow: auto;
-
-        @media (min-width: $breakpoint-s) {
-            height: auto;
-        }
 
         &-wrapper {
             flex-wrap: wrap;
@@ -358,7 +353,13 @@ header {
         }
 
         &.active {
-            display: grid;
+
+            max-height: 100vh;
+
+            @media (min-width: $breakpoint-s) {
+                max-height: 500px;
+            }
+            
             opacity: 1;
         }
     }

@@ -2068,18 +2068,11 @@ header .dropdown-menu {
 }
 
 header .dropdown-menu {
-  -webkit-transition: all .15s ease;
-  transition: all .15s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
   opacity: 0;
-  display: none;
-  height: 100vh;
+  max-height: 0;
   overflow: auto;
-}
-
-@media (min-width: 720px) {
-  header .dropdown-menu {
-    height: auto;
-  }
 }
 
 header .dropdown-menu-wrapper {
@@ -2204,9 +2197,14 @@ header .dropdown-menu li:active {
 }
 
 header .dropdown-menu.active {
-  display: -ms-grid;
-  display: grid;
+  max-height: 100vh;
   opacity: 1;
+}
+
+@media (min-width: 720px) {
+  header .dropdown-menu.active {
+    max-height: 500px;
+  }
 }
 
 .breadcrumbs ol, .breadcrumbs li {
