@@ -1666,7 +1666,7 @@ h2.section-header {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  padding: 15px 20px 16px 60px;
+  padding: 15px 20px 16px 50px;
   vertical-align: middle;
   color: #D72D5C;
   -webkit-appearance: none;
@@ -1696,7 +1696,8 @@ h2.section-header {
 .search-icon {
   position: absolute;
   height: 100%;
-  width: 60px;
+  width: 50px;
+  padding-left: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2023,7 +2024,7 @@ header nav.navigation .search-section .search input[type="search"] {
   border-radius: 4px;
   height: 30px;
   width: 200px;
-  padding: 5px 10px 6px 35px;
+  padding: 5px 10px 6px 30px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -2055,7 +2056,8 @@ header nav.navigation .search-section .search input[type="search"]:focus {
 }
 
 header nav.navigation .search-section .search-icon {
-  width: 35px;
+  width: 30px;
+  padding-left: 3px;
 }
 
 header nav.navigation .search-section .search-icon svg {
