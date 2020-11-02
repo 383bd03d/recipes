@@ -2065,6 +2065,11 @@ header grid * {
 header .dropdown-menu {
   border-top: 1px solid rgba(193, 193, 197, 0.25);
   overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+header .dropdown-menu::-webkit-scrollbar {
+  display: none;
 }
 
 header .dropdown-menu {
@@ -2079,7 +2084,7 @@ header .dropdown-menu-wrapper {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
-  padding: 40px 20px 100px;
+  padding: 40px 20px 120px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;

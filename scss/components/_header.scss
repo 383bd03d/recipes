@@ -258,6 +258,11 @@ header {
     .dropdown-menu {
         border-top: 1px solid rgba($grey-semilight, .25);
         overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     .dropdown-menu {
@@ -269,7 +274,7 @@ header {
         &-wrapper {
             flex-wrap: wrap;
             margin: 0;
-            padding: $base * 2 $base $base * 5;
+            padding: $base * 2 $base $base * 6;
 
             justify-content: flex-start;
             align-items: flex-start;
