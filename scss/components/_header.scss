@@ -257,6 +257,7 @@ header {
 
     .dropdown-menu {
         border-top: 1px solid rgba($grey-semilight, .25);
+        overscroll-behavior: contain;
     }
 
     .dropdown-menu {
@@ -334,7 +335,13 @@ header {
                     font-size: 12px;
                     line-height: 100%;
                     color: $background;
-                    padding-right: 10px;
+                    width: 100%;
+                    align-items: flex-start;
+
+                    @media (min-width: $breakpoint-s) {
+                        padding-right: 10px;
+                        width: auto;
+                    }
                 }
             }
 

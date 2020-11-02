@@ -2064,6 +2064,7 @@ header grid * {
 
 header .dropdown-menu {
   border-top: 1px solid rgba(193, 193, 197, 0.25);
+  overscroll-behavior: contain;
 }
 
 header .dropdown-menu {
@@ -2176,7 +2177,17 @@ header .dropdown-menu li a p {
   font-size: 12px;
   line-height: 100%;
   color: #fff;
-  padding-right: 10px;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (min-width: 720px) {
+  header .dropdown-menu li a p {
+    padding-right: 10px;
+    width: auto;
+  }
 }
 
 header .dropdown-menu li:hover {
