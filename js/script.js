@@ -60,3 +60,20 @@ searchButton.addEventListener('click', function() {
         _searchmenu = !_searchmenu
     }
 })
+
+
+document.querySelectorAll('.search input').forEach(el => {
+    el.addEventListener('keydown', () => {
+        el.nextElementSibling.nextElementSibling.style='display: block'
+
+        el.addEventListener('focusout', () => {
+            el.nextElementSibling.nextElementSibling.style='display: none'
+        })
+    });
+});
+
+document.querySelectorAll('.search-icon.times').forEach(el => {
+    el.addEventListener('click', () => {
+        el.previousElementSibling.value = '';
+    })
+})

@@ -11,7 +11,7 @@
         height: 50px;
         @include Inter(regular);
         font-size: 14px;
-        padding: 15px 20px 16px 50px;
+        padding: 15px 40px 16px 50px;
         vertical-align: middle;
         color: $primary;
         -webkit-appearance: none;
@@ -28,8 +28,9 @@
             border: 1px solid rgba($primary, 1);
         }
 
-        &:placeholder-shown ~ span {
-            display: none;;
+        &:placeholder-shown ~ .times {
+            opacity: 0;
+            visibility: hidden;
         }
     }
 
@@ -47,6 +48,19 @@
             height: 18px;
             fill: $primary;
             @include transition;
+        }
+
+        &.times {
+            right: 0;
+            top: 0;
+            padding: 0;
+            cursor: pointer;
+            @include transition;
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
         }
     }
 

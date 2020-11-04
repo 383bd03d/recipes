@@ -1667,7 +1667,7 @@ h2.section-header {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  padding: 15px 20px 16px 50px;
+  padding: 15px 40px 16px 50px;
   vertical-align: middle;
   color: #D72D5C;
   -webkit-appearance: none;
@@ -1690,8 +1690,9 @@ h2.section-header {
   border: 1px solid #d72d5c;
 }
 
-.search input[type="search"]:placeholder-shown ~ span {
-  display: none;
+.search input[type="search"]:placeholder-shown ~ .times {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .search-icon {
@@ -1716,6 +1717,20 @@ h2.section-header {
   fill: #D72D5C;
   -webkit-transition: all .15s ease;
   transition: all .15s ease;
+}
+
+.search-icon.times {
+  right: 0;
+  top: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+}
+
+.search-icon.times svg {
+  width: 15px;
+  height: 15px;
 }
 
 .search-dropdown {
@@ -2161,7 +2176,7 @@ header nav.navigation .search-section .search input[type="search"] {
   border-radius: 4px;
   height: 30px;
   width: 200px;
-  padding: 5px 10px 6px 30px;
+  padding: 5px 23px 6px 30px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -2201,6 +2216,15 @@ header nav.navigation .search-section .search-icon svg {
   width: 12px;
   height: 12px;
   fill: #6E6D7A;
+}
+
+header nav.navigation .search-section .search-icon.times {
+  padding: 0;
+}
+
+header nav.navigation .search-section .search-icon.times svg {
+  width: 12px;
+  height: 12px;
 }
 
 header nav.navigation .search-section .search-dropdown-section * {
