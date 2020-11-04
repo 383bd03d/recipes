@@ -18,12 +18,18 @@ h4 {
     color: $black;
 }
 
+
 @mixin transition {
     transition: all .15s ease;
 }
 
 @mixin toogle-transition {
     transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@mixin acrylic {
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255,255,255,0.7);
 }
 
 .container {

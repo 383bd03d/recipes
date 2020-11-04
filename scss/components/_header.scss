@@ -2,8 +2,17 @@ header {
     position: fixed;
     width: 100%;
     z-index: 99;
-    backdrop-filter: saturate(180%) blur(20px);
-    background-color: rgba(255,255,255,0.7);
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include acrylic;
+    }
 
     .header {
         height: 60px;
@@ -100,12 +109,46 @@ header {
         }
 
         &-menu {
-            max-height: 0;
-            opacity: 0;
 
-            &.active {
-                max-height: 100vh;
-                opacity: 1;
+            &-wrapper {
+                
+                .search {
+                    width: 100%;
+
+                    &-icon {
+                        height: 50px;
+                    }
+
+                    &-dropdown {
+                        background: none;
+                        backdrop-filter: none;
+                        position: relative;
+
+                        &-section {
+                            * { align-items: flex-start; }
+
+                            padding-left: 0;
+                            
+                            li, label {
+                                flex-direction: row;
+                                align-items: center;
+                            }
+
+                            ul {
+                                padding-left: 35px;
+                            }
+
+                            li {
+                                width: 100%;
+                                &:hover {
+                                    &::after {
+                                        border-radius: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         
@@ -232,8 +275,6 @@ header {
                 }
 
                 .search {
-                    display: block;
-
                     input[type="search"] {
                         border-color: rgba($grey, 0.25);
                         border-radius: 4px;
@@ -264,7 +305,27 @@ header {
                             fill: $grey;
                         }
                     }
-    
+
+                    &-dropdown {
+
+                        &-section {
+                            * { align-items: flex-start; }
+                            
+                            li, label {
+                                flex-direction: row;
+                                align-items: center;
+                            }
+
+                            li {
+                                width: 100%;
+                            }
+
+                            label, a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
                 }
 
             }
@@ -276,7 +337,7 @@ header {
     grid {
         position: relative;
         height: 100%;
-
+        
         * {
             display: flex;
             flex-direction: column;
@@ -292,29 +353,41 @@ header {
         overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-
-    .dropdown-menu {
         opacity: 0;
         max-height: 0;
         overflow: auto;
 
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
         &-wrapper {
+            min-height: 100vh;
             flex-wrap: wrap;
             margin: 0;
             padding: $base * 2 $base $base * 6;
 
             justify-content: flex-start;
             align-items: flex-start;
+        }
+
+        &.active {
+            max-height: 100vh;
+            opacity: 1;
+        }
+    }
+
+
+    .dropdown-menu {
+
+        &-wrapper {
 
             @media (min-width: $breakpoint-s) {
                 padding: $base * 1.25 0;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
+                min-height: auto;
             }
         }
 
@@ -390,13 +463,10 @@ header {
 
         &.active {
 
-            max-height: 100vh;
-
             @media (min-width: $breakpoint-s) {
                 max-height: 500px;
             }
             
-            opacity: 1;
         }
     }
 
