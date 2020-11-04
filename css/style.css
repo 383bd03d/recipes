@@ -1776,7 +1776,7 @@ h2.section-header {
   width: 100%;
   height: 1px;
   background: rgba(193, 193, 197, 0.25);
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .search-dropdown-section ul {
@@ -1828,8 +1828,10 @@ h2.section-header {
 
 header {
   position: fixed;
-  width: 100%;
   z-index: 99;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 header::before {
