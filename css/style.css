@@ -1796,14 +1796,19 @@ h2.section-header {
           align-items: center;
 }
 
-.search-dropdown-section ul li:hover::after {
+.search-dropdown-section ul li::after {
   content: "";
   position: absolute;
   z-index: -1;
   left: 0;
   height: 50px;
   width: 100%;
-  background-color: rgba(13, 12, 34, 0.1);
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+}
+
+.search-dropdown-section ul li:hover:after {
+  background-color: #D72D5C;
 }
 
 .search-dropdown-section ul li a {
@@ -1824,6 +1829,7 @@ h2.section-header {
 
 .search-dropdown-section ul li a:hover {
   opacity: 1;
+  color: #fff;
 }
 
 header {
