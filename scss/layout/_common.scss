@@ -65,11 +65,38 @@ h2 {
     &.section-header {
         font-size: 28px;
         line-height: 100%;
-        margin: $base * 3 0 $base * 1.75;
+        margin-bottom: $base * 1.75;
 
         @media only screen and (min-width: $breakpoint-m) {
             font-size: 36px;
-            margin: $base * 4 0 $base * 3;
+            margin-bottom: $base * 3;
+        }
+    }
+
+    &.counter {
+        position: relative;
+        &::after {
+            content: attr(data-count);
+            font-size: 12px;
+            line-height: 100%;
+            position: absolute;
+            color: $grey-middle;
+            top: -5px;
+            margin-left: 5px;
+
+            @media (min-width: $breakpoint-s) {
+                font-size: 18px;
+                top: -10px;
+            }
+        }
+    }
+}
+
+main {
+    section {
+        margin-top: 60px;
+        @media (min-width: $breakpoint-s) {
+            margin-top: 80px;
         }
     }
 }
