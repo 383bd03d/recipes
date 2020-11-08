@@ -20,13 +20,19 @@ navmenu.addEventListener('click', function() {
     if(!_navmenu)
     {
         this.classList.add('active')
-        dropdown.classList.add('active')
+        dropdown.style.display = 'grid'
+        setTimeout(() => {
+            dropdown.classList.add('active')
+        }, 1)
         _navmenu = !_navmenu
     }
     else
     {
         this.classList.remove('active')
         dropdown.classList.remove('active')
+        setTimeout(() => {
+            dropdown.style.display = 'none'
+        }, 500)
         _navmenu = !_navmenu
     }
 })
@@ -35,13 +41,19 @@ hamburger.addEventListener('click', function() {
     if(!_navmenu)
     {
         this.classList.add('active')
-        dropdown.classList.add('active')
+        dropdown.style.display = 'grid'
+        setTimeout(() => {
+            dropdown.classList.add('active')
+        }, 1)
         _navmenu = !_navmenu
     }
     else
     {
         this.classList.remove('active')
         dropdown.classList.remove('active')
+        setTimeout(() => {
+            dropdown.style.display = 'none'
+        }, 500)
         _navmenu = !_navmenu
     }
 })
@@ -50,13 +62,19 @@ searchButton.addEventListener('click', function() {
     if(!_searchmenu)
     {
         this.classList.add('active')
-        searchmenu.classList.add('active')
+        searchmenu.style.display = 'grid'
+        setTimeout(() => {
+            searchmenu.classList.add('active')
+        }, 1)
         _searchmenu = !_searchmenu
     }
     else
     {
         this.classList.remove('active')
         searchmenu.classList.remove('active')
+        setTimeout(() => {
+            searchmenu.style.display = 'none'
+        }, 500)
         _searchmenu = !_searchmenu
     }
 })

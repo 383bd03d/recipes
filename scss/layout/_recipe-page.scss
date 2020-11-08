@@ -1,0 +1,109 @@
+@import 'common';
+
+@import '../components/search';
+@import '../components/header';
+@import '../components/breadcrumbs';
+@import '../components/tags';
+
+@import '../components/footer';
+
+.recipe-page {
+
+    .main-screen {
+        height: 420px;
+        margin: 0;
+        padding: 60px 0 30px;
+        display: flex;
+        flex-direction: column;
+
+        &-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -90;
+            display: flex;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, #0A0A0A 100%);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
+
+            img {
+                height: 420px;
+                width: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        
+        &-actions {
+            
+        }
+
+        &-content {
+
+            margin-top: auto;
+            overflow: hidden;
+
+            .breadcrumbs {
+
+                a {
+                    color: $background;
+                }
+
+                li::after {
+                    background: rgba($background, .5);
+                }
+            }
+
+            .section-header {
+                color: $background;
+                margin: 20px 0 25px;
+            }
+
+            .tags {
+                display: flex;
+                width: fit-content;
+
+                &-wrapper {
+                    mask-image: linear-gradient(to left, transparent 25%, black 35%);
+
+                    overflow-x: auto;
+                    scrollbar-width: none;
+                    -ms-overflow-style: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                span {
+
+                    background: rgba($background, .2);
+                    backdrop-filter: blur(20px);
+
+                    margin: 0 5px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 30vw;
+                    }
+
+                    a {
+                        @include Inter(semibold);
+                        font-size: 10px;
+                        color: $background;
+                    }
+                }
+            }
+        }
+    }
+}

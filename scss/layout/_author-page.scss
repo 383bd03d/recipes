@@ -1,4 +1,11 @@
-.author {
+@import './common';
+
+@import '../components/search';
+@import '../components/header';
+@import '../components/recipe-card';
+@import '../components/footer';
+
+.author-page {
 
     &-profile {
         display: flex;
