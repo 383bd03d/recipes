@@ -1,0 +1,60 @@
+.ingredients {
+    &-list {
+        $height: 60px;
+
+        &-column {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                @include Inter(regular);
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: -0.006em;
+
+                height: $height;
+                display: flex;
+                align-items: center;
+
+                &:nth-child(even) {
+                    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        height: $height;
+                        background: rgba($grey-light, .85);
+                        z-index: -9;
+                    }
+
+                }
+            }
+
+            &[data-odd="true"] ~ & {
+                li {
+                    &:nth-child(even) {
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            height: $height;
+                            background: rgba($grey-light, .85);
+                            z-index: -9;
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+}
