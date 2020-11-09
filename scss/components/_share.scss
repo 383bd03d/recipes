@@ -1,0 +1,48 @@
+.share {
+
+    &-button {
+
+
+        &.circle {
+            width: 40px;
+            height: 40px;
+            mask: url(../img/icon-share-circle.svg);
+            @include acrylic;
+        }
+
+        &.times {
+            mask: url('../img/icon-times-circle-big.svg')
+        }
+    }
+
+    .social-buttons {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        li {
+            width: 40px;
+            height: 40px;
+            background: $primary;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+
+            svg {
+                fill: white;
+                width: 16px;
+                height: 16px;
+            }
+        }
+        
+    }
+}

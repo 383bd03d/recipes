@@ -1,0 +1,36 @@
+.slider {
+
+    &-pagination {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            width: 5px;
+            height: 5px;
+            background: $background;
+            border-radius: 50%;
+            margin: 0 3px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.current {
+                background: transparent;
+                border: 3px solid $background;
+                width: 11px;
+                height: 11px;
+            }
+        }
+
+        .current {
+
+        }
+    }
+}

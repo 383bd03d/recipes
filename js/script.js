@@ -96,6 +96,19 @@ document.querySelectorAll('.search-icon.times').forEach(el => {
     })
 })
 
+document.querySelectorAll('.share-button').forEach(el => {
+    el.addEventListener('click', (el) => {
+        b = el.toElement;
+        if(!b.classList.contains('times')) {
+            b.classList.add('times')
+            b.nextElementSibling.classList.add('active')
+        } else {
+            b.classList.remove('times')
+            b.nextElementSibling.classList.remove('active')
+        }
+    })
+});
+
 const searchButtonAnother = document.querySelector('.search-button');
 let _searchButtonAnother = false;
 
@@ -113,3 +126,4 @@ searchButtonAnother.addEventListener('click', (el) => {
     }
     
 });
+

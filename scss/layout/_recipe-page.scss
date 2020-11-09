@@ -4,6 +4,9 @@
 @import '../components/header';
 @import '../components/breadcrumbs';
 @import '../components/tags';
+@import '../components/slider';
+@import '../components/share';
+@import '../components/author-card';
 
 @import '../components/footer';
 
@@ -44,7 +47,13 @@
         }
         
         &-actions {
-            
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+
+            .share {
+                margin-left: auto;
+            }
         }
 
         &-content {
@@ -101,9 +110,58 @@
                         @include Inter(semibold);
                         font-size: 10px;
                         color: $background;
+                        line-height: 17px;
+                        margin: auto;
                     }
                 }
             }
+        }
+
+        .author {
+
+            &-wrapper {
+                position: relative;
+            }
+            
+            &-card {
+                position: absolute;
+                right: 0;
+                flex-direction: column;
+                align-items: flex-end;
+    
+                &-photo {
+                    width: 60px;
+                    height: 60px;
+                }
+    
+                &-content {
+    
+                    h3 {
+                        margin-top: 10px;
+                        font-size: 12px;
+                        //text-align: right;
+                        //max-width: 100px;
+                    }
+    
+                    a:last-child {
+                        display: none;
+                    }
+                }
+    
+            }
+        }
+
+    }
+
+    .igredients {
+        
+        &-wrapper {
+            grid-column-gap: $base * 2;
+        }
+
+        &-screen {
+
+
         }
     }
 }
