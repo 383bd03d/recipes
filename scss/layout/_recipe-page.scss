@@ -8,6 +8,7 @@
 @import '../components/share';
 @import '../components/author-card';
 @import '../components/ingredients-list';
+@import '../components/instructions-list';
 @import '../components/footer';
 
 .recipe-page {
@@ -153,36 +154,9 @@
 
     }
 
-    .igredients {
-        &-wrapper {
-            grid-column-gap: $base * 2;
-        }
-    }
-
-    .instructions {
-
+    .ingredients {
         &-list {
-            counter-reset: item;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-
-            li {
-                counter-increment: item;
-                position: relative;
-                display: flex;
-                padding-top: 45px;
-
-                &::before {
-                    content: counter(item);
-                    @include SF-Pro-Display(bold);
-                    font-size: 28px;
-                    color: $grey-middle;
-                    position: absolute;
-                    top: 0;
-                }
-
-            }
+            grid-column-gap: $base * 2;
         }
     }
 }

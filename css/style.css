@@ -5571,6 +5571,7 @@ header .dropdown-menu li:active {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.006em;
+  color: #0D0C22;
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5602,6 +5603,47 @@ header .dropdown-menu li:active {
   height: 60px;
   background: rgba(243, 243, 244, 0.85);
   z-index: -9;
+}
+
+.instructions-list {
+  counter-reset: item;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.instructions-list li {
+  counter-increment: item;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 45px 0 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.006em;
+  color: #0D0C22;
+}
+
+.instructions-list li::before {
+  content: counter(item);
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #9E9EA7;
+  position: absolute;
+  top: 0;
+}
+
+.instructions-list li::after {
+  content: "";
+  border-top: 1px solid rgba(193, 193, 197, 0.3);
+  position: absolute;
+  top: 12px;
+  left: 40px;
+  right: 0;
 }
 
 footer {
@@ -5870,33 +5912,7 @@ footer .copyright span {
   display: none;
 }
 
-.recipe-page .igredients-wrapper {
+.recipe-page .ingredients-list {
   grid-column-gap: 40px;
-}
-
-.recipe-page .instructions-list {
-  counter-reset: item;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.recipe-page .instructions-list li {
-  counter-increment: item;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 45px;
-}
-
-.recipe-page .instructions-list li::before {
-  content: counter(item);
-  font-family: 'SF Pro Display', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  color: #9E9EA7;
-  position: absolute;
-  top: 0;
 }
 /*# sourceMappingURL=style.css.map */

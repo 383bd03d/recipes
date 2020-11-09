@@ -1,0 +1,41 @@
+.instructions {
+
+    &-list {
+        counter-reset: item;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            counter-increment: item;
+            position: relative;
+            display: flex;
+            padding: 45px 0 30px;
+
+            @include Inter(regular);
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.006em;
+            color: $black;
+
+            &::before {
+                content: counter(item);
+                @include SF-Pro-Display(bold);
+                font-size: 28px;
+                color: $grey-middle;
+                position: absolute;
+                top: 0;
+            }
+
+            &::after {
+                content: "";
+                border-top: 1px solid rgba($grey-semilight, .3);
+                position: absolute;
+                top: 12px;
+                left: 40px;
+                right: 0;
+            }
+
+        }
+    }
+}
