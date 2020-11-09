@@ -136,6 +136,13 @@
                 }
     
                 &-content {
+                    align-items: flex-end;
+
+                    > a {
+                        &:first-child {
+                            margin-bottom: 5px;
+                        }
+                    }
     
                     h3 {
                         margin-top: 10px;
@@ -143,9 +150,10 @@
                         text-align: right;
                         max-width: 130px;
                     }
-    
-                    a:last-child {
-                        display: none;
+                    
+                    span {
+                        padding: 0;
+                        background: none;
                     }
                 }
     

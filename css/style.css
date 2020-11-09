@@ -1771,7 +1771,7 @@ main section {
   margin-top: 25px;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.75);
   background-color: rgba(247, 247, 247, 0.9);
   border-radius: 8px;
   padding: 25px 0 0;
@@ -1920,7 +1920,7 @@ header::before {
   bottom: 0;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 header .header {
@@ -3265,7 +3265,7 @@ main section {
   margin-top: 25px;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.75);
   background-color: rgba(247, 247, 247, 0.9);
   border-radius: 8px;
   padding: 25px 0 0;
@@ -3414,7 +3414,7 @@ header::before {
   bottom: 0;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 header .header {
@@ -4606,7 +4606,7 @@ main section {
   margin-top: 25px;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.75);
   background-color: rgba(247, 247, 247, 0.9);
   border-radius: 8px;
   padding: 25px 0 0;
@@ -4755,7 +4755,7 @@ header::before {
   bottom: 0;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 header .header {
@@ -5428,6 +5428,41 @@ header .dropdown-menu li:active {
   height: 11px;
 }
 
+.share-button {
+  width: 100%;
+  height: 40px;
+  background: #D72D5C;
+  border-radius: 6px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.share-button span {
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.share-button span::after {
+  content: "";
+  background-color: #fff;
+  -webkit-mask: url("../img/icon-share.svg") no-repeat;
+          mask: url("../img/icon-share.svg") no-repeat;
+  width: 10px;
+  height: 9px;
+  margin-left: 10px;
+}
+
 .share-button.circle {
   width: 40px;
   height: 40px;
@@ -5435,10 +5470,10 @@ header .dropdown-menu li:active {
           mask: url("../img/icon-share-circle.svg?2");
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
-.share-button.times {
+.share-button.circle.times {
   -webkit-mask: url("../img/icon-times-circle-big.svg");
           mask: url("../img/icon-times-circle-big.svg");
 }
@@ -5618,13 +5653,17 @@ header .dropdown-menu li:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 45px 0 30px;
+  padding: 45px 0 35px;
+}
+
+.instructions-list li p {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.006em;
   color: #0D0C22;
+  max-width: 70ch;
 }
 
 .instructions-list li::before {
@@ -5641,7 +5680,7 @@ header .dropdown-menu li:active {
   content: "";
   border-top: 1px solid rgba(193, 193, 197, 0.3);
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 40px;
   right: 0;
 }
@@ -5901,6 +5940,16 @@ footer .copyright span {
   height: 60px;
 }
 
+.recipe-page .main-screen .author-card-content {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.recipe-page .main-screen .author-card-content > a:first-child {
+  margin-bottom: 5px;
+}
+
 .recipe-page .main-screen .author-card-content h3 {
   margin-top: 10px;
   font-size: 12px;
@@ -5908,8 +5957,9 @@ footer .copyright span {
   max-width: 130px;
 }
 
-.recipe-page .main-screen .author-card-content a:last-child {
-  display: none;
+.recipe-page .main-screen .author-card-content span {
+  padding: 0;
+  background: none;
 }
 
 .recipe-page .ingredients-list {

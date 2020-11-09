@@ -10,14 +10,17 @@
             counter-increment: item;
             position: relative;
             display: flex;
-            padding: 45px 0 30px;
+            padding: 45px 0 35px;
 
-            @include Inter(regular);
-            font-size: 14px;
-            line-height: 20px;
-            letter-spacing: -0.006em;
-            color: $black;
-
+            p {
+                @include Inter(regular);
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: -0.006em;
+                color: $black;
+                max-width: 70ch;
+            }
+            
             &::before {
                 content: counter(item);
                 @include SF-Pro-Display(bold);
@@ -31,7 +34,7 @@
                 content: "";
                 border-top: 1px solid rgba($grey-semilight, .3);
                 position: absolute;
-                top: 12px;
+                top: 10px;
                 left: 40px;
                 right: 0;
             }
