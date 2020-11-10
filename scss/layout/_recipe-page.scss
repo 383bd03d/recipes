@@ -20,6 +20,11 @@
         display: flex;
         flex-direction: column;
 
+        @media (min-width: $breakpoint-s) {
+            padding-top: 180px;
+            height: auto;
+        }
+
         &-cover {
             position: absolute;
             top: 0;
@@ -45,6 +50,10 @@
                 object-fit: cover;
                 display: block;
             }
+
+            @media (min-width: $breakpoint-s) {
+                display: none;
+            }
         }
         
         &-actions {
@@ -55,41 +64,72 @@
             .share {
                 margin-left: auto;
             }
+
+            @media (min-width: $breakpoint-s) {
+                display: none;
+            }
         }
 
         &-content {
 
             margin-top: auto;
             overflow: hidden;
-
+            @media (min-width: $breakpoint-s) {
+                width: 50%;
+            }
+        
             .breadcrumbs {
+                @media (min-width: $breakpoint-s) {
+                    margin-top: 40px;
+                }
 
                 a {
                     color: $background;
+                    @media (min-width: $breakpoint-s) {
+                        color: $primary;
+                        font-size: 14px;
+                    }
                 }
 
                 li::after {
                     background: rgba($background, .5);
+                    @media (min-width: $breakpoint-s) {
+                        background: rgba($primary, .25);
+                        width: 8px;
+                        height: 4px;
+                        margin: 0 15px;
+                    }
                 }
             }
 
             .section-header {
                 color: $background;
                 margin: 20px 0 25px;
+
+                @media (min-width: $breakpoint-s) {
+                    color: $black;
+                    margin-bottom: 40px;
+                }
             }
 
             .tags {
                 display: flex;
                 width: fit-content;
+                
+                @media (min-width: $breakpoint-s) {
+                    flex-wrap: wrap;
+                }
 
                 &-wrapper {
-                    mask-image: linear-gradient(to left, transparent 25%, black 35%);
+                    @media (max-width: $breakpoint-s) {
+                        mask-image: linear-gradient(to left, transparent 25%, black 35%);
 
-                    overflow-x: auto;
-                    scrollbar-width: none;
-                    -ms-overflow-style: none;
-                    &::-webkit-scrollbar {
-                        display: none;
+                        overflow-x: auto;
+                        scrollbar-width: none;
+                        -ms-overflow-style: none;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
                     }
                 }
 
@@ -100,11 +140,23 @@
 
                     margin: 0 5px;
 
+                    @media (min-width: $breakpoint-s) {
+                        backdrop-filter: none;
+                        background: none;
+                        border: 1px solid rgba($primary, .75);
+                        margin: 0 10px 15px 0;
+
+                        height: 26px;
+                    }
+                    
                     &:first-child {
                         margin-left: 0;
                     }
                     &:last-child {
                         margin-right: 30vw;
+                        @media (min-width: $breakpoint-s) {
+                            margin-right: 0;
+                        }
                     }
 
                     a {
@@ -113,58 +165,83 @@
                         color: $background;
                         line-height: 17px;
                         margin: auto;
+
+                        @media (min-width: $breakpoint-s) {
+                            color: rgba($primary, .75);
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
                     }
                 }
             }
         }
 
+    
         .author {
 
             &-wrapper {
                 position: relative;
-            }
-            
-            &-card {
-                position: absolute;
-                right: 0;
-                flex-direction: column;
-                align-items: flex-end;
-    
-                &-photo {
-                    width: 60px;
-                    height: 60px;
+                @media (min-width: $breakpoint-s) {
+                    width: fit-content;
+                    margin-top: 45px;
                 }
-    
-                &-content {
-                    align-items: flex-end;
+            }
 
-                    > a {
-                        &:first-child {
-                            margin-bottom: 5px;
+            @media (max-width: $breakpoint-s) {
+
+                &-card {
+                    position: absolute;
+                    right: 0;
+                    flex-direction: column;
+                    align-items: flex-end;
+        
+                    &-photo {
+                        width: 60px;
+                        height: 60px;
+                    }
+        
+                    &-content {
+                        align-items: flex-end;
+    
+                        > a {
+                            &:first-child {
+                                margin-bottom: 5px;
+                            }
+                        }
+        
+                        h3 {
+                            margin-top: 10px;
+                            font-size: 12px;
+                            text-align: right;
+                            max-width: 130px;
+                        }
+                        
+                        span {
+                            padding: 0;
+                            background: none;
                         }
                     }
-    
-                    h3 {
-                        margin-top: 10px;
-                        font-size: 12px;
-                        text-align: right;
-                        max-width: 130px;
-                    }
-                    
-                    span {
-                        padding: 0;
-                        background: none;
-                    }
+        
                 }
-    
             }
         }
+        
+        
 
     }
 
     .ingredients {
+        &-screen {
+
+            .section-header {
+                @media (min-width: $breakpoint-s) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
         &-list {
-            grid-column-gap: $base * 2;
+            grid-column-gap: $base * 6;
         }
     }
 }

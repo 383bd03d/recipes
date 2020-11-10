@@ -7,6 +7,10 @@
             padding: 0;
             list-style: none;
 
+            @media (min-width: $breakpoint-s) {
+                position: relative;
+            }
+
             li {
                 @include Inter(regular);
                 font-size: 14px;
@@ -28,31 +32,39 @@
                         height: $height;
                         background: rgba($grey-light, .85);
                         z-index: -9;
+
+                        @media (min-width: $breakpoint-s) {
+                            left: -30px;
+                            right: -30px;
+                            border-radius: 8px;
+                        }
                     }
 
                 }
             }
 
             &[data-odd="true"] ~ & {
-                li {
-                    &:nth-child(even) {
-                        &::before {
-                            display: none;
-                        }
-                    }
-
-                    &:nth-child(odd) {
-                    
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            right: 0;
-                            height: $height;
-                            background: rgba($grey-light, .85);
-                            z-index: -9;
+                @media (max-width: $breakpoint-s) {
+                    li {
+                        &:nth-child(even) {
+                            &::before {
+                                display: none;
+                            }
                         }
     
+                        &:nth-child(odd) {
+                        
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                height: $height;
+                                background: rgba($grey-light, .85);
+                                z-index: -9;
+                            }
+        
+                        }
                     }
                 }
             }
