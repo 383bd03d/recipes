@@ -5428,6 +5428,10 @@ header .dropdown-menu li:active {
   height: 11px;
 }
 
+.share {
+  position: relative;
+}
+
 .share-button {
   width: 100%;
   height: 40px;
@@ -5437,6 +5441,9 @@ header .dropdown-menu li:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .share-button span {
@@ -5448,9 +5455,9 @@ header .dropdown-menu li:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .share-button span::after {
@@ -5458,7 +5465,7 @@ header .dropdown-menu li:active {
   background-color: #fff;
   -webkit-mask: url("../img/icon-share.svg") no-repeat;
           mask: url("../img/icon-share.svg") no-repeat;
-  width: 10px;
+  width: 9px;
   height: 9px;
   margin-left: 10px;
 }
@@ -5479,15 +5486,10 @@ header .dropdown-menu li:active {
 }
 
 .share .social-buttons {
-  position: absolute;
   padding: 0;
   margin: 0;
   list-style: none;
   display: none;
-}
-
-.share .social-buttons.active {
-  display: block;
 }
 
 .share .social-buttons li {
@@ -5504,13 +5506,78 @@ header .dropdown-menu li:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px 0;
 }
 
 .share .social-buttons li svg {
   fill: white;
   width: 16px;
   height: 16px;
+}
+
+.share.vertical .social-buttons {
+  position: absolute;
+}
+
+.share.vertical .social-buttons li {
+  margin: 10px 0;
+}
+
+.share.vertical .social-buttons.active {
+  display: block;
+}
+
+.share.inline .share-button svg {
+  display: none;
+  width: 40px;
+  height: 40px;
+  fill: #C1C1C5;
+}
+
+.share.inline .share-button.times {
+  background: none;
+}
+
+.share.inline .share-button.times span {
+  display: none;
+}
+
+.share.inline .share-button.times svg {
+  display: block;
+}
+
+.share.inline .social-buttons {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -9;
+}
+
+.share.inline .social-buttons.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.share.inline .social-buttons li {
+  width: 50px;
+  height: 50px;
+}
+
+.share.inline .social-buttons li svg {
+  width: 20px;
+  height: 20px;
+}
+
+.share.inline .social-buttons .times-space {
+  width: 40px;
+  height: 40px;
+  background: none;
 }
 
 .author-card {
@@ -5680,7 +5747,7 @@ header .dropdown-menu li:active {
   content: "";
   border-top: 1px solid rgba(193, 193, 197, 0.3);
   position: absolute;
-  top: 10px;
+  top: 11px;
   left: 40px;
   right: 0;
 }
