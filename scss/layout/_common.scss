@@ -35,6 +35,8 @@ h4 {
 .container {
     padding: 0 $base;
     position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
 
     @media only screen and (min-width: $breakpoint-s) {
         padding: 0;

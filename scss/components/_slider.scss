@@ -30,4 +30,42 @@
         }
 
     }
+
+    &-control {
+        &-prev,
+        &-next {
+            display: flex;
+            cursor: pointer;
+            padding: 10px;
+            svg {
+                @include transition;
+                width: 8px;
+                height: 12px;
+                fill: $grey-semilight;
+            }
+            &:hover {
+                svg {
+                    fill: $primary;
+                }
+            }
+        }
+        
+        &-next {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+
+    &.color {
+        li {
+            background: $primary;
+
+            &.current {
+                background: transparent;
+                border: 3px solid $primary;
+            }
+        }
+    }
 }

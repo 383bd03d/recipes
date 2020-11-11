@@ -23,6 +23,7 @@
         @media (min-width: $breakpoint-s) {
             padding-top: 180px;
             height: auto;
+            flex-flow: row wrap;
         }
 
         &-cover {
@@ -72,12 +73,13 @@
 
         &-content {
 
-            margin-top: auto;
-            overflow: hidden;
-            @media (min-width: $breakpoint-s) {
-                width: 50%;
+            &-wrapper {
+                margin-top: auto;
+                grid-column-gap: 120px;
             }
         
+            overflow: hidden;
+
             .breadcrumbs {
                 @media (min-width: $breakpoint-s) {
                     margin-top: 40px;
@@ -118,6 +120,7 @@
                 
                 @media (min-width: $breakpoint-s) {
                     flex-wrap: wrap;
+                    width: auto;
                 }
 
                 &-wrapper {
@@ -146,7 +149,8 @@
                         border: 1px solid rgba($primary, .75);
                         margin: 0 10px 15px 0;
 
-                        height: 26px;
+                        height: 28px;
+                        padding: 0 14px;
                     }
                     
                     &:first-child {
@@ -155,7 +159,7 @@
                     &:last-child {
                         margin-right: 30vw;
                         @media (min-width: $breakpoint-s) {
-                            margin-right: 0;
+                            margin-right: 10px;
                         }
                     }
 
@@ -242,6 +246,60 @@
 
         &-list {
             grid-column-gap: $base * 6;
+        }
+    }
+
+    .share.inline {
+        @media (min-width: $breakpoint-s) {
+            .share-button {
+                svg {
+                    margin-left: auto;
+                }
+            }
+            .social-buttons {
+                
+                width: auto;
+                right: 0;
+
+                .times-space {
+                    order: 99;
+                }
+
+                li {
+                    margin: 0 7px;
+                }
+                
+            }
+        }
+    }
+
+    .recipe-photos {
+        &-wrapper {
+            position: relative;
+
+            @media (max-width: $breakpoint-s) {
+                display: none;
+            }
+        }
+        &-content {
+            position: absolute;
+            left: -30px;
+            right: -30px;
+
+            .slider {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+                padding: 0 30px;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 24px;
+            display: block;
         }
     }
 }
