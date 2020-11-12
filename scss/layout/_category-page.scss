@@ -3,6 +3,7 @@
 @import '../components/search';
 @import '../components/header';
 @import '../components/recipe-card';
+@import '../components/subcategories-list';
 @import '../components/footer';
 
 .category-page {
@@ -10,6 +11,20 @@
     .main-screen {
         margin-top: 110px;
         margin-bottom: 15px;
+
+        @media (min-width: $breakpoint-s) {
+            margin-top: 175px;
+            margin-bottom: 60px;
+            grid-column-gap: 40px;
+        }
+
+        .breadcrumbs {
+            @media (min-width: $breakpoint-s) {
+                li > a {
+                    font-size: 14px;
+                }
+            }
+        }
 
         h1 {
             margin-top: 20px;
@@ -23,14 +38,35 @@
                 display: inline-flex;
                 float: right;
                 margin-top: 12px;
+
+                @media (min-width: $breakpoint-s) {
+                    display: none;
+                }
             }
 
             &:not(.right) {
                 margin-bottom: 25px;
+                width: 100%;
+                align-self: center;
                 display: none;
+
+                @media (min-width: $breakpoint-s) {
+                    margin: 0;
+                    display: block;
+                }
             }
         }
         
+        & > :last-child {
+            display: flex;
+        }
         
+    }
+
+    .subcategories-screen {
+        margin: 0;
+        @media (min-width: $breakpoint-s) {
+            padding-bottom: 15px;
+        }
     }
 }
