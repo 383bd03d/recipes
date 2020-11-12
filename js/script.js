@@ -116,12 +116,22 @@ searchButtonAnother.addEventListener('click', (el) => {
     
     if(!_searchButtonAnother) {
         searchButtonAnother.classList.add('times')
-        searchButtonAnother.closest('.search').nextElementSibling.style = 'display: block'
+        searchButtonAnother
+            .closest('.search')
+            .parentNode
+            .nextElementSibling
+            .querySelector('.search')
+            .style = 'display: block'
         _searchButtonAnother = !_searchButtonAnother
     }
     else {
         searchButtonAnother.classList.remove('times')
-        searchButtonAnother.closest('.search').nextElementSibling.style = 'display: none'
+        searchButtonAnother
+            .closest('.search')
+            .parentNode
+            .nextElementSibling
+            .querySelector('.search')
+            .style = 'display: none'
         _searchButtonAnother = !_searchButtonAnother
     }
     

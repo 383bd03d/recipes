@@ -96,14 +96,21 @@
 
     .header-wrapper {
         > :last-child {
-            margin-bottom: 40px;
+            .search {
+                display: none;
+                margin-bottom: 40px;
+            }
+        }
+
+        h2 {
+            display: inline-block;
         }
 
         @media (min-width: $breakpoint-s) {
             margin: 0;
             grid-column-gap: 40px;
 
-            > .search {
+            .search {
                 display: none;
             }
         }
@@ -111,10 +118,12 @@
 
     .search {
         &.right {
+            display: inline-flex;
+            float: right;
             margin-top: -6px;
 
-            > div {
-                margin-left: auto;
+            @media (min-width: $breakpoint-s) {
+                display: none;
             }
         }
     }

@@ -9,16 +9,28 @@
     
     .main-screen {
         margin-top: 110px;
+        margin-bottom: 15px;
 
         h1 {
             margin-top: 20px;
+            margin-bottom: 25px;
             display: inline-flex;
         }
 
-        .right {
-            display: inline-flex;
-            float: right;
-            margin-top: 12px;
+        .search {
+
+            &.right {
+                display: inline-flex;
+                float: right;
+                margin-top: 12px;
+            }
+
+            &:not(.right) {
+                margin-bottom: 25px;
+                display: none;
+            }
         }
+        
+        
     }
 }
