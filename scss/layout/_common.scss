@@ -35,6 +35,7 @@ h4 {
 .container {
     padding: 0 $base;
     position: relative;
+    width: 100%;
     max-width: 1080px;
     margin: 0 auto;
 
@@ -42,7 +43,7 @@ h4 {
         padding: 0;
     }
 
-    @media only screen and (min-width: $breakpoint-m) {
+    @media only screen and (min-width: 1024px) {
         padding: 0 $base * 3;
     }
 }

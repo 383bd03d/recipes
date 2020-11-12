@@ -1535,6 +1535,7 @@ h4 {
 .container {
   padding: 0 20px;
   position: relative;
+  width: 100%;
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -1545,7 +1546,7 @@ h4 {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
   .container {
     padding: 0 60px;
   }
@@ -2525,6 +2526,7 @@ header .dropdown-menu li:active {
   font-size: 12px;
   letter-spacing: 0em;
   line-height: 17px;
+  white-space: pre;
 }
 
 .breadcrumbs li::after {
@@ -2560,6 +2562,9 @@ header .dropdown-menu li:active {
 .recipe-card-cover {
   width: 100%;
   height: 50vw;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
 }
 
 @media only screen and (min-width: 720px) {
@@ -2584,8 +2589,18 @@ header .dropdown-menu li:active {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.recipe-card-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .recipe-card-cover:hover {
@@ -3031,6 +3046,7 @@ h4 {
 .container {
   padding: 0 20px;
   position: relative;
+  width: 100%;
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -3041,7 +3057,7 @@ h4 {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
   .container {
     padding: 0 60px;
   }
@@ -4015,6 +4031,9 @@ header .dropdown-menu li:active {
 .recipe-card-cover {
   width: 100%;
   height: 50vw;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
 }
 
 @media only screen and (min-width: 720px) {
@@ -4039,8 +4058,18 @@ header .dropdown-menu li:active {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.recipe-card-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .recipe-card-cover:hover {
@@ -4374,6 +4403,7 @@ h4 {
 .container {
   padding: 0 20px;
   position: relative;
+  width: 100%;
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -4384,7 +4414,7 @@ h4 {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
   .container {
     padding: 0 60px;
   }
@@ -5364,6 +5394,7 @@ header .dropdown-menu li:active {
   font-size: 12px;
   letter-spacing: 0em;
   line-height: 17px;
+  white-space: pre;
 }
 
 .breadcrumbs li::after {
@@ -6006,6 +6037,19 @@ footer .copyright span {
 .recipe-page .main-screen-content-wrapper {
   margin-top: auto;
   grid-column-gap: 120px;
+  width: 100%;
+}
+
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .main-screen-content-wrapper {
+    grid-column-gap: 100px;
+  }
+}
+
+@media (min-width: 720px) {
+  .recipe-page .main-screen-content-wrapper {
+    min-height: 280px;
+  }
 }
 
 @media (min-width: 720px) {
@@ -6025,6 +6069,12 @@ footer .copyright span {
   }
 }
 
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .main-screen-content .breadcrumbs a {
+    font-size: 11px;
+  }
+}
+
 .recipe-page .main-screen-content .breadcrumbs li::after {
   background: rgba(255, 255, 255, 0.5);
 }
@@ -6038,6 +6088,14 @@ footer .copyright span {
   }
 }
 
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .main-screen-content .breadcrumbs li::after {
+    margin: 0 7px;
+    width: 6px;
+    height: 3px;
+  }
+}
+
 .recipe-page .main-screen-content .section-header {
   color: #fff;
   margin: 20px 0 25px;
@@ -6047,6 +6105,12 @@ footer .copyright span {
   .recipe-page .main-screen-content .section-header {
     color: #0D0C22;
     margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .main-screen-content .section-header {
+    margin-bottom: 30px;
   }
 }
 
@@ -6101,6 +6165,13 @@ footer .copyright span {
   }
 }
 
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .main-screen-content .tags span {
+    height: 26px;
+    padding: 0 10px;
+  }
+}
+
 .recipe-page .main-screen-content .tags span:first-child {
   margin-left: 0;
 }
@@ -6132,6 +6203,12 @@ footer .copyright span {
   }
 }
 
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .main-screen-content .tags span a {
+    font-size: 11px;
+  }
+}
+
 .recipe-page .main-screen .author-wrapper {
   position: relative;
 }
@@ -6142,6 +6219,12 @@ footer .copyright span {
     width: -moz-fit-content;
     width: fit-content;
     margin-top: 45px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .main-screen .author-wrapper {
+    margin-top: 30px;
   }
 }
 
@@ -6181,6 +6264,16 @@ footer .copyright span {
   }
 }
 
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .main-screen .author-card-content h3 {
+    font-size: 16px;
+  }
+  .recipe-page .main-screen .author-card-photo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 @media (min-width: 720px) {
   .recipe-page .ingredients-screen .section-header {
     margin-bottom: 40px;
@@ -6209,8 +6302,14 @@ footer .copyright span {
   }
 }
 
+.recipe-page .recipe-photos {
+  width: 100%;
+  position: relative;
+}
+
 .recipe-page .recipe-photos-wrapper {
   position: relative;
+  height: 0;
 }
 
 @media (max-width: 720px) {
@@ -6223,6 +6322,12 @@ footer .copyright span {
   position: absolute;
   left: -30px;
   right: -30px;
+}
+
+@media (min-width: 720px) and (max-width: 900px) {
+  .recipe-page .recipe-photos-content {
+    left: -20px;
+  }
 }
 
 .recipe-page .recipe-photos-content .slider {
@@ -6238,10 +6343,45 @@ footer .copyright span {
 
 .recipe-page .recipe-photos img {
   width: 100%;
-  height: 420px;
   -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 24px;
+  object-fit: cover;
   display: block;
+  z-index: 0;
+  border-radius: 24px;
+}
+
+@media (min-width: 720px) {
+  .recipe-page .recipe-photos img {
+    height: 40vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .recipe-page .recipe-photos img {
+    height: 34.5vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .recipe-page .recipe-photos img {
+    height: 29.65vw;
+  }
+}
+
+@media (min-width: 1690px) {
+  .recipe-page .recipe-photos img {
+    height: 21.5vw;
+    max-height: 480px;
+  }
+}
+
+.recipe-page .recipe-photos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */

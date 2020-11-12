@@ -76,6 +76,15 @@
             &-wrapper {
                 margin-top: auto;
                 grid-column-gap: 120px;
+                width: 100%;
+
+                @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                    grid-column-gap: 100px;
+                }
+
+                @media (min-width: $breakpoint-s) {
+                    min-height: 280px;
+                }
             }
         
             overflow: hidden;
@@ -91,6 +100,10 @@
                         color: $primary;
                         font-size: 14px;
                     }
+
+                    @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                        font-size: 11px;
+                    }
                 }
 
                 li::after {
@@ -100,6 +113,12 @@
                         width: 8px;
                         height: 4px;
                         margin: 0 15px;
+                    }
+
+                    @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                        margin: 0 7px;
+                        width: 6px;
+                        height: 3px;
                     }
                 }
             }
@@ -111,6 +130,10 @@
                 @media (min-width: $breakpoint-s) {
                     color: $black;
                     margin-bottom: 40px;
+                }
+
+                @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                    margin-bottom: 30px;
                 }
             }
 
@@ -152,6 +175,11 @@
                         height: 28px;
                         padding: 0 14px;
                     }
+
+                    @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                        height: 26px;
+                        padding: 0 10px;
+                    }
                     
                     &:first-child {
                         margin-left: 0;
@@ -175,6 +203,10 @@
                             font-size: 12px;
                             line-height: 20px;
                         }
+
+                        @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                            font-size: 11px;
+                        }
                     }
                 }
             }
@@ -188,6 +220,10 @@
                 @media (min-width: $breakpoint-s) {
                     width: fit-content;
                     margin-top: 45px;
+                }
+
+                @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                    margin-top: 30px;
                 }
             }
 
@@ -226,6 +262,20 @@
                         }
                     }
         
+                }
+            }
+
+            @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                &-card {
+                    &-content {
+                        h3 {
+                            font-size: 16px;
+                        }
+                    }
+                    &-photo {
+                        width: 70px;
+                        height: 70px;
+                    }
                 }
             }
         }
@@ -274,8 +324,12 @@
     }
 
     .recipe-photos {
+        width: 100%;
+        position: relative;
+
         &-wrapper {
             position: relative;
+            height: 0;
 
             @media (max-width: $breakpoint-s) {
                 display: none;
@@ -285,6 +339,10 @@
             position: absolute;
             left: -30px;
             right: -30px;
+
+            @media (min-width: $breakpoint-s) and (max-width: 900px) {
+                left: -20px;
+            }
 
             .slider {
                 display: flex;
@@ -296,10 +354,40 @@
 
         img {
             width: 100%;
-            height: 420px;
+            -o-object-fit: cover;
             object-fit: cover;
-            border-radius: 24px;
             display: block;
+            z-index: 0;
+
+
+            border-radius: 24px;
+
+            @media (min-width: $breakpoint-s) {
+                height: 40vw;
+            }
+
+            @media (min-width: 1024px) {
+                height: 34.5vw;
+            }
+
+            @media (min-width: $breakpoint-m) {
+                height: 29.65vw;
+            }
+
+            @media (min-width: $breakpoint-l) {
+                height: 21.5vw;
+                max-height: 480px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
         }
     }
 }
