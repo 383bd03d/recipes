@@ -137,3 +137,11 @@ searchButtonAnother.addEventListener('click', (el) => {
     
 });
 
+const order = document.querySelector('.order')
+
+order.querySelectorAll('span').forEach(el => {
+    el.addEventListener('click', (e) => {
+        order.querySelector('.active').classList.remove('active')
+        e.toElement.classList.add('active')
+    })
+})
