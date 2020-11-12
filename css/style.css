@@ -9103,7 +9103,7 @@ footer .copyright span {
 
 @media (min-width: 720px) {
   .subcategory-page .main-screen .search:not(.right) {
-    margin: 0;
+    margin: auto 0 0;
     display: block;
   }
 }
