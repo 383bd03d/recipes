@@ -109,39 +109,74 @@ document.querySelectorAll('.share-button').forEach(el => {
     })
 });
 
-const searchButtonAnother = document.querySelector('.search-button');
-let _searchButtonAnother = false;
+if(window._select) {
+    const select = document.querySelector('.dropdown')
 
-searchButtonAnother.addEventListener('click', (el) => {
-    
-    if(!_searchButtonAnother) {
-        searchButtonAnother.classList.add('times')
-        searchButtonAnother
-            .closest('.search')
-            .parentNode
-            .nextElementSibling
-            .querySelector('.search')
-            .style = 'display: block'
-        _searchButtonAnother = !_searchButtonAnother
-    }
-    else {
-        searchButtonAnother.classList.remove('times')
-        searchButtonAnother
-            .closest('.search')
-            .parentNode
-            .nextElementSibling
-            .querySelector('.search')
-            .style = 'display: none'
-        _searchButtonAnother = !_searchButtonAnother
-    }
-    
-});
-
-const order = document.querySelector('.order')
-
-order.querySelectorAll('span').forEach(el => {
-    el.addEventListener('click', (e) => {
-        order.querySelector('.active').classList.remove('active')
-        e.toElement.classList.add('active')
+    select.addEventListener('click', () => {
+        if(!select.classList.contains('open')) {
+            select.querySelector('ul').style = "display: block;"
+            setTimeout(() => {
+                select.classList.add('open');
+            }, 1)
+            
+        } else {
+            select.classList.remove('open');
+            setTimeout(() => {
+                select.querySelector('ul').style = "display: none;"
+            }, 50)
+        }
     })
-})
+
+    select.querySelectorAll('li').forEach(el => {
+        el.addEventListener('click', (e) => {
+            select.querySelector('label').innerHTML = e.srcElement.innerText
+        })
+    })
+}
+
+try {
+
+    const searchButtonAnother = document.querySelector('.search-button');
+    let _searchButtonAnother = false;
+    
+    searchButtonAnother.addEventListener('click', (el) => {
+        
+        if(!_searchButtonAnother) {
+            searchButtonAnother.classList.add('times')
+            searchButtonAnother
+                .closest('.search')
+                .parentNode
+                .nextElementSibling
+                .querySelector('.search')
+                .style = 'display: block'
+            _searchButtonAnother = !_searchButtonAnother
+        }
+        else {
+            searchButtonAnother.classList.remove('times')
+            searchButtonAnother
+                .closest('.search')
+                .parentNode
+                .nextElementSibling
+                .querySelector('.search')
+                .style = 'display: none'
+            _searchButtonAnother = !_searchButtonAnother
+        }
+        
+    })
+
+
+    const order = document.querySelector('.order')
+
+    order.querySelectorAll('span').forEach(el => {
+        el.addEventListener('click', (e) => {
+            order.querySelector('.active').classList.remove('active')
+            e.toElement.classList.add('active')
+        })
+    })
+    
+} catch(e) {
+    console.log(e)
+}
+
+
+

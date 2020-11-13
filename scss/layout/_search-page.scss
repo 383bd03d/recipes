@@ -1,0 +1,45 @@
+@import './common';
+
+@import '../components/search';
+@import '../components/header';
+@import '../components/recipe-card';
+@import '../components/dropdown';
+@import '../components/footer';
+
+.search-page {
+    .main-screen {
+        margin-top: 110px;
+        margin-bottom: 15px;
+
+        @media (min-width: $breakpoint-s) {
+            margin-top: 175px;
+            margin-bottom: 60px;
+            grid-column-gap: 40px;
+        }
+
+        .breadcrumbs {
+            @media (min-width: $breakpoint-s) {
+                li > a {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        h1 {
+            margin-top: 65px;
+            margin-bottom: 25px;
+        }
+
+        .search {
+            width: 100%;
+        }
+
+        .dropdown {
+            @media (min-width: $breakpoint-s) {
+                margin-top: auto;
+                margin-bottom: 10px;
+            }
+        }
+        
+    }
+}
