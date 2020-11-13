@@ -6,7 +6,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0 20px;
+    height: 40px;
     flex-wrap: wrap;
     z-index: 9;
     position: relative;
@@ -73,7 +74,10 @@
 
         li {
             position: relative;
-            padding: 10px 20px;
+            padding: 0 20px;
+            height: 40px;
+            display: flex;
+            align-items: center;
             border-bottom: 1px solid rgba($grey-semilight, .5);
 
             &:last-child {
