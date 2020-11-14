@@ -121,7 +121,7 @@
 
                 @include Inter(semibold);
                 font-size: 12px;
-                line-height: 17px;
+                line-height: 14px;
                 color: $grey;
 
                 border: 1px solid rgba($grey-semilight, .5);
@@ -153,7 +153,6 @@
 
             li,
             li.selected {
-                padding: 0 15px;
                 background: rgba($primary-light, .5);
                 color: rgba($primary, .85);
                 border: none;

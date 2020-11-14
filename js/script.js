@@ -172,7 +172,16 @@ try {
             if(!li.classList.contains('selected'))
             {
                 li.classList.add('selected')
-                filterSelectedList.appendChild(li.cloneNode(true))
+                if(li.getAttribute('span') == 2)
+                {
+                    const last = filterSelectedList.querySelectorAll('[span="2"]')
+                    if(last.length != 0)
+                        last[last.length - 1].after(li.cloneNode(true))
+                    else
+                        filterSelectedList.appendChild(li.cloneNode(true))
+                } else {
+                    filterSelectedList.appendChild(li.cloneNode(true))
+                }
             } else {
                 li.classList.remove('selected')
                 filterSelectedList.querySelectorAll("*").forEach(el => {
