@@ -10303,8 +10303,8 @@ header .dropdown-menu li:active {
   display: none;
   position: absolute;
   border: 1px solid rgba(193, 193, 197, 0.5);
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   top: 100%;
   left: -1px;
   right: -1px;
