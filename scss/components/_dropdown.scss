@@ -58,7 +58,7 @@
     &-list li {
         @include Inter(medium);
         font-size: 14px;
-        color: $grey;
+        color: $black;
     }
 
     &-list {
@@ -79,6 +79,7 @@
             display: flex;
             align-items: center;
             border-bottom: 1px solid rgba($grey-semilight, .5);
+            color: $grey;
 
             &:last-child {
                 border: none;

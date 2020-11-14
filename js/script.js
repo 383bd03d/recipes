@@ -135,6 +135,73 @@ if(window._select) {
 }
 
 try {
+    const filterButton = document.querySelector('.filter-button')
+    const filterSection = document.querySelector('section.filter')
+    const filterSelectedList = document.querySelector('.filter-selected-list > grid')
+
+    filterButton.addEventListener('click', () => {
+        if(!filterButton.classList.contains('times'))
+        {
+            filterButton.classList.add('times')
+            filterSection.style = 'display: block'
+        }
+        else
+        {
+            filterButton.classList.remove('times')
+            filterSection.style = 'display: none'
+        }
+    })
+
+    document.querySelectorAll('.filter-section > label').forEach(el => {
+        el.addEventListener('click', (e) => {
+            const section = e.target.closest('.filter-section')
+
+            if(!section.classList.contains('open')) {
+                section.classList.add('open')
+            } else {
+                section.classList.remove('open')
+            }
+            
+        })
+    })
+
+    document.querySelectorAll('.filter-section-list li').forEach(el => {
+        el.addEventListener('click', e => {
+            const li = e.target
+
+            if(!li.classList.contains('selected'))
+            {
+                li.classList.add('selected')
+                filterSelectedList.appendChild(li.cloneNode(true))
+            } else {
+                li.classList.remove('selected')
+                filterSelectedList.querySelectorAll("*").forEach(el => {
+                    if(el.innerText == li.innerText)
+                        filterSelectedList.removeChild(el)
+                })
+            }
+        })
+    })
+
+    document.querySelector('.filter-selected-list > grid')
+        .addEventListener('change', () => {
+            console.log('q')
+        })
+
+    const observer = new MutationObserver(() => {
+        if(filterSelectedList.hasChildNodes()) {
+            filterSelectedList.closest('.filter-selected').style = 'display: block'
+        } else {
+            filterSelectedList.closest('.filter-selected').style = 'display: none'
+        }
+    }) 
+
+    observer.observe(filterSelectedList, {childList: true})
+
+} catch(e) {
+    console.log(e)
+}
+try {
 
     const searchButtonAnother = document.querySelector('.search-button');
     let _searchButtonAnother = false;

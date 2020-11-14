@@ -4,16 +4,16 @@
 @import '../components/header';
 @import '../components/recipe-card';
 @import '../components/dropdown';
+@import '../components/filter';
 @import '../components/footer';
 
 .search-page {
     .main-screen {
         margin-top: 110px;
-        margin-bottom: 15px;
 
         @media (min-width: $breakpoint-s) {
-            margin-top: 175px;
-            margin-bottom: 60px;
+            margin-top: 120px;
+            padding-bottom: 30px;
             grid-column-gap: 40px;
         }
 
@@ -27,19 +27,61 @@
 
         h1 {
             margin-top: 65px;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
+
+            @media (min-width: $breakpoint-s) {
+                margin-top: 130px;
+                margin-bottom: 15px;
+            }
         }
 
         .search {
+            @media (min-width: $breakpoint-s) {
+                width: 400px;
+                margin: 0 auto;
+            }
+        }
+
+        .right {
             width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            @media (min-width: $breakpoint-s) {
+                align-items: flex-end;
+                margin-bottom: 15px;
+            }
         }
 
         .dropdown {
             @media (min-width: $breakpoint-s) {
                 margin-top: auto;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
         }
+
+        .order-dropdown-section {
+            display: grid;
+            grid-template-columns: 8fr 2fr;
+        }
         
+    }
+
+    section.filter {
+        margin: 0;
+        display: none;
+    }
+
+    .filter-selected {
+        margin: 0;
+        padding-top: 20px;
+        display: none;
+
+        @media (min-width: $breakpoint-s) {
+            padding: 0;
+        }
+    }
+
+    .recipes-screen {
+        margin-top: 40px;
     }
 }

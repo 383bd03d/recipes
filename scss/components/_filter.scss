@@ -1,0 +1,165 @@
+.filter {
+
+    &-button {
+        width: 40px;
+        height: 40px;
+        background: $primary;
+        border-radius: 50%;
+        display: flex;
+        cursor: pointer;
+
+        svg {
+            fill: $background;
+            width: 14px;
+            height: 15px;
+            margin: auto;
+
+            &:last-child {
+                display: none;
+            }
+        }
+
+        &.times {
+            background: $grey-semilight;
+
+            svg {
+                &:first-child {
+                    display: none;
+                }
+                &:last-child {
+                    display: block;
+                }
+                height: 12px;
+                width: 12px;
+            }
+        }
+    }
+    
+    &-selected,
+    &-section {
+        $section: &;
+        position: relative;
+        overflow: hidden;
+        padding-top: 35px;
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        &.open {
+
+            #{$section}-list {
+                display: block;
+            }
+
+            label {
+                svg {
+                    transform: rotate(-180deg);
+                    fill: $black;
+                }
+            }
+        }
+
+        label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                span {
+                    opacity: .75;
+                }
+            }
+
+            span {
+                @include SF-Pro-Display(bold);
+                font-size: 18px;
+                color: $black;
+                line-height: 100%;
+                background-color: $background;
+                padding-right: 20px;
+                @include transition;
+            }
+
+            svg {
+                width: 8px;
+                height: 4px;
+                position: absolute;
+                fill: $grey;
+                top: 45%;
+                right: 0;
+                @include transition;
+            }
+
+            &:after {
+                content:"";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 30px;
+                top: 50%;
+                border-top: 1px solid rgba($grey-semilight, .25);
+                z-index: -1;
+            }
+        }
+
+        &-list {
+            display: none;
+
+            grid {
+                padding-top: 25px;
+                grid-column-gap: 10px;
+                grid-row-gap: 20px;
+            }
+
+            li {
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include Inter(semibold);
+                font-size: 12px;
+                color: $grey;
+
+                border: 1px solid rgba($grey-semilight, .5);
+                border-radius: 4px;
+
+                @include transition;
+
+                cursor: pointer;
+
+                &.selected {
+                    background: $primary;
+                    border: none;
+                    color: $background;
+                }
+            }
+        }
+    }
+    
+    &-selected {
+        padding: 0;
+
+        &-list {
+            display: block;
+
+            grid {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0;
+                grid-row-gap: 15px;
+            }
+
+            li,
+            li.selected {
+                padding: 0 15px;
+                background: rgba($primary-light, .5);
+                color: rgba($primary, .85);
+                border: none;
+                cursor: default;
+            }
+        }
+    }
+}

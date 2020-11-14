@@ -423,6 +423,7 @@
                         </div>
                     </div>
                     <h1 class="section-header counter" data-count="5,000 results" span="row" span-m="1">Avocado toast</h1>
+                    <div class="order-dropdown-section">
                         <div class="dropdown">
                             <select>
                                 <option value="">Most popular</option>
@@ -445,11 +446,72 @@
                                 <li>Recent first</li>
                             </ul>
                         </div>
+                        <div class="filter right">
+                            <div class="filter-button">
+                                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.2492 0H0.750871C0.0846841 0 -0.251472 0.808312 0.220559 1.28034L6 7.06065V13.5C6 13.7447 6.1194 13.9741 6.3199 14.1144L8.8199 15.8638C9.31312 16.2091 9.99999 15.8592 9.99999 15.2494V7.06065L15.7796 1.28034C16.2506 0.80925 15.9168 0 15.2492 0Z"
+                                    />
+                                </svg>
+                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.27455 6L11.686 2.58852C12.1047 2.16989 12.1047 1.49114 11.686 1.07216L10.9278 0.313977C10.5092 -0.104659 9.83045 -0.104659 9.41148 0.313977L6 3.72545L2.58852 0.313977C2.16989 -0.104659 1.49114 -0.104659 1.07216 0.313977L0.313977 1.07216C-0.104659 1.4908 -0.104659 2.16955 0.313977 2.58852L3.72545 6L0.313977 9.41148C-0.104659 9.83011 -0.104659 10.5089 0.313977 10.9278L1.07216 11.686C1.4908 12.1047 2.16989 12.1047 2.58852 11.686L6 8.27455L9.41148 11.686C9.83011 12.1047 10.5092 12.1047 10.9278 11.686L11.686 10.9278C12.1047 10.5092 12.1047 9.83045 11.686 9.41148L8.27455 6Z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </grid>
+                <section class="filter-selected">
+                    <ul class="filter-selected-list">
+                        <grid columns="6"></grid>
+                    </ul>
+                </section>
+                <section class="filter">
+                    <div class="filter-section">
+                        <label>
+                            <span>Cooking style</span>
+                            <svg viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.404304 -2.44596e-07L5.5957 -1.76723e-08C5.95518 -1.95935e-09 6.13519 0.383188 5.88101 0.607287L3.28531 2.89581C3.12775 3.03473 2.87226 3.03473 2.7147 2.89581L0.118995 0.607287C-0.135204 0.383187 0.0448332 -2.60309e-07 0.404304 -2.44596e-07Z"
+                                    />
+                            </svg>
+                        </label>
+                        <ul class="filter-section-list">
+                            <grid columns="6">
+                                <li span="2" span-m="1">1-Pot</li>
+                                <li span="2" span-m="1">Air Fryer</li>
+                                <li span="2" span-m="1">Baking</li>
+                                <li span="3" span-m="1">BBQ & Grilling</li>
+                                <li span="3" span-m="1">Budget Cooking</li>
+                                <li span="3" span-m="1">Clean-Eating</li>
+                                <li span="3" span-m="1">Cooking for Kids</li>
+                            </grid>
+                        </ul>
+                    </div>
+                    <div class="filter-section">
+                        <label>
+                            <span>Dishes</span>
+                            <svg viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.404304 -2.44596e-07L5.5957 -1.76723e-08C5.95518 -1.95935e-09 6.13519 0.383188 5.88101 0.607287L3.28531 2.89581C3.12775 3.03473 2.87226 3.03473 2.7147 2.89581L0.118995 0.607287C-0.135204 0.383187 0.0448332 -2.60309e-07 0.404304 -2.44596e-07Z"
+                                    />
+                            </svg>
+                        </label>
+                        <ul class="filter-section-list">
+                            <grid columns="6">
+                                <li span="3" span-m="1">Freezer-friendly</li>
+                                <li span="3" span-m="1">Gourmet</li>
+                                <li span="3" span-m="1">Instant Pot recipes</li>
+                                <li span="3" span-m="1">Kid-friendly</li>
+                                <li span="2" span-m="1">Make-ahead</li>
+                                <li span="2" span-m="1">Microwave</li>
+                                <li span="2" span-m="1">Paleo</li>
+                            </grid>
+                        </ul>
+                    </div>
+                </section>
                 <section class="recipes-screen">
-                    <h2 class="section-header">
-                        Related recipes
-                    </h2>
                     <grid role="grid" columns="1" columns-m="2" class="recipes-wrapper">
                         <div class="recipe-card">
                             <a href="#" class="recipe-card-cover">
