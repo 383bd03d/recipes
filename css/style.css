@@ -10474,6 +10474,7 @@ header .dropdown-menu li:active {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 12px;
+  line-height: 100%;
   color: #6E6D7A;
   border: 1px solid rgba(193, 193, 197, 0.5);
   border-radius: 4px;
@@ -10497,11 +10498,6 @@ header .dropdown-menu li:active {
 }
 
 .filter-selected-list grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding: 0;
   grid-row-gap: 15px;
 }

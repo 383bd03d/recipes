@@ -121,6 +121,7 @@
 
                 @include Inter(semibold);
                 font-size: 12px;
+                line-height: 100%;
                 color: $grey;
 
                 border: 1px solid rgba($grey-semilight, .5);
@@ -146,8 +147,6 @@
             display: block;
 
             grid {
-                display: flex;
-                flex-wrap: wrap;
                 padding: 0;
                 grid-row-gap: 15px;
             }
